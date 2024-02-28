@@ -79,10 +79,7 @@ class UsersController extends Controller
         } else {
             // Jwt token issue
             $token = JWTToken::CreateToken($request->email, $count->id);
-            return response()->json([
-                'status' => 'success',
-                'message' => 'Login success'
-            ], 200)->cookie('token', $token, 60 * 24 * 30);
+            return redirect('home')->with('success', 'Yser Login success')->cookie('token', $token, 60 * 24 * 30);
         }
     }
 

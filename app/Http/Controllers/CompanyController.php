@@ -26,8 +26,7 @@ class CompanyController extends Controller
     }
 
     public function companyEntry(Request $request)
-    {
-       
+    {       
         
         // dd($request->input());
         DB::beginTransaction();
@@ -48,7 +47,7 @@ class CompanyController extends Controller
             $file_name = $img->getClientOriginalName();
             $img_name = "{$userID}-{$t}-{$file_name}";
             $img_url = "images/company/{$img_name}";
-
+            
             //image upload on local folder
             $img->move(public_path('images/company/'), $img_name);
            

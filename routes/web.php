@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CompanyController;
 // use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\JobController;
 use App\Http\Controllers\RuleController;
 use App\Http\Controllers\UsersController;
 use App\Http\Middleware\TokenVerificationMiddleware;
@@ -42,12 +44,23 @@ Route::POST("/verifyOTP", [UsersController::class, "verifyOTP"]);
 // Protected Routs
 Route::get("/resetPasswordPage", [UsersController::class, "resetPasswordPage"])->middleware([TokenVerificationMiddleware::class]);
 Route::POST("/resetPassword", [UsersController::class, "resetPassword"])->middleware([TokenVerificationMiddleware::class]);
-// Role Routes
-Route::POST("/addRule", [RuleController::class, "addRule"])->middleware([TokenVerificationMiddleware::class]);
 
+// Rule & Category Routes
+Route::POST("/addRule", [RuleController::class, "addRule"])->middleware([TokenVerificationMiddleware::class]);
+Route::POST("/addCategory", [CategoryController::class, "addCategory"])->middleware([TokenVerificationMiddleware::class]);
+
+// Company Routes
 Route::get('/companies', [CompanyController::class, 'companies']);
 Route::get('/companyAddPage', [CompanyController::class, 'companyAddPage']);
 Route::POST('/companyEntry', [CompanyController::class, 'companyEntry']);
+
+// Job Routes
+Route::get('/jobPostPage', [JobController::class, 'jobPostPage']);
+Route::POST('/jobPost', [JobController::class, 'jobPost']);
+
+
+
+
 
 Route::get('/account', function () {
     return view('backend.pages.account');
@@ -60,9 +73,6 @@ Route::get('/dashboard', function () {
 Route::get('/employee', function () {
     return view('backend.employee');
 });
-
-
-
 
 Route::get('/adminJobs', function () {
     return view('backend.admin.adminJobs');
@@ -91,9 +101,7 @@ Route::get('/comAllJobs', function () {
     return view('backend.company.comAllJobs');
 });
 
-Route::get('/jobPost', function () {
-    return view('backend.company.jobPost');
-});
+
 
 Route::get('/jobCategory', function () {
     return view('backend.company.jobCategory');

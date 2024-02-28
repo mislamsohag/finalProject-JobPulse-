@@ -4,24 +4,44 @@
 
 @section('content')
 <!-- Rules add One times -->
-<div class="flex-auto mb-10">
-  <form method="POST" action="{{url('addRule')}}" role="form">
-    @csrf
+<div class="flex flex-wrap -mx-3">
+  <div class="w-full max-w-full px-3 mb-6 sm:w-1/2 sm:flex-none xl:mb-0 xl:w-1/2">
+    <div class="flex-auto mb-10">
+      <form method="POST" action="{{url('addRule')}}" role="form">
+        @csrf
 
-    <label for="rules" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select a rule</label>
-    <select name="name" id="rules" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-      <option selected>Choose a rule</option>
-      <option value="admin">Admin</option>
-      <option value="editor">Editor</option>
-      <option value="user">User</option>
-    </select>
-    <div class="text-center">
-      <button type="submit"
-        class="inline-block w-full px-6 py-3 mt-4 mb-0 font-bold text-center text-white uppercase align-middle transition-all bg-transparent border-0 rounded-lg cursor-pointer shadow-soft-md bg-x-25 bg-150 leading-pro text-xs ease-soft-in tracking-tight-soft bg-gradient-to-tl from-blue-600 to-cyan-400 hover:scale-102 hover:shadow-soft-xs active:opacity-85">Add</button>
+        <label for="rules" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select a rule</label>
+        <select name="name" id="rules"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+          <option selected>Choose a rule</option>
+          <option value="admin">Admin</option>
+          <option value="editor">Editor</option>
+          <option value="user">User</option>
+        </select>
+        <div class="text-center">
+          <button type="submit"
+            class="inline-block w-full px-6 py-3 mt-4 mb-0 font-bold text-center text-white uppercase align-middle transition-all bg-transparent border-0 rounded-lg cursor-pointer shadow-soft-md bg-x-25 bg-150 leading-pro text-xs ease-soft-in tracking-tight-soft bg-gradient-to-tl from-fuchsia-600 to-cyan-600 hover:scale-102 hover:shadow-soft-xs active:opacity-85">Add</button>
+        </div>
+      </form>
     </div>
-  </form>
-</div>
+  </div>
 
+  <div class="w-full max-w-full px-3 mb-6 sm:w-1/2 sm:flex-none xl:mb-0 xl:w-1/2">
+    <div class="flex-auto mb-10">
+      <form method="POST" action="{{url('addCategory')}}" role="form">
+        @csrf
+
+        <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Category Add</label>
+        <input name="name" id="category" placeholder="Category Name"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+        <div class="text-center">
+          <button type="submit"
+            class="inline-block w-full px-6 py-3 mt-4 mb-0 font-bold text-center text-white uppercase align-middle transition-all bg-transparent border-0 rounded-lg cursor-pointer shadow-soft-md bg-x-25 bg-150 leading-pro text-xs ease-soft-in tracking-tight-soft bg-gradient-to-tl from-fuchsia-600 to-cyan-600 hover:scale-102 hover:shadow-soft-xs active:opacity-85">Add</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 <div class="flex flex-wrap -mx-3">
   <!-- card1 -->
   <div class="w-full max-w-full px-3 mb-6 sm:w-1/2 sm:flex-none xl:mb-0 xl:w-1/4">

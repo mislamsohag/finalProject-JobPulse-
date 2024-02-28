@@ -3,23 +3,23 @@
 namespace App\Http\Controllers;
 
 use Exception;
-use App\Models\Rule;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Helper\ResponseHelper;
 
-class RuleController extends Controller
+class CategoryController extends Controller
 {
-    public function addRule(Request $request){
+    public function addCategory(Request $request){
 
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
         ]);
 
         try{
-            Rule::updateOrCreate([
+            Category::updateOrCreate([
                 'name'=>$request->input('name')
             ]);
-            return ResponseHelper::Out('success', 'Rule add successfully', 200);
+            return ResponseHelper::Out('success', 'Category add successfully', 200);
             
         }catch(Exception $e){
             return ResponseHelper::Out('failed', $e, 401);
