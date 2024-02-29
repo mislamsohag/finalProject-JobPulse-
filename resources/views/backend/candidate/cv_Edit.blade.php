@@ -15,7 +15,7 @@
             <div class="min-w-2/12">
               <img class=" object-cover w-32 rounded-t-lg h-32 md:h-32 md:w-32 md:rounded-none md:rounded-s-lg"
                 src="{{asset('/images/sohagTech_logo.png')}}" alt="Candidate Picture">
-              <input type="file">
+              
             </div>
           </div>
           <!-- main content -->
@@ -42,143 +42,170 @@
                   <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
                     <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
 
-                      <form>
+                      <!-- CV Basic Information -->
+                      <form method="POST" action="{{url('cvBasic')}}" enctype="multipart/form-data">
+                        @csrf
                         <div class="grid gap-6 mb-6 md:grid-cols-2">
+                          <!-- Full Name -->
                           <div>
-                            <label for="first_name"
-                              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First name</label>
-                            <input type="text" id="first_name"
+                            <label for="full_name"
+                              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Full Name</label>
+                            <input name="full_name" type="text" id="full_name"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                              placeholder="John" required />
+                              placeholder="John" />
                           </div>
+
+                          <!-- Hidden Id's -->
+                          <input name="user_id" type="text" value="2" class="" id="user_id"/>
+                          <input name="account_id" type="text" value="1" class="" id="account_id"/>
+                          
+                          <!-- Father_Name -->
                           <div>
-                            <label for="last_name"
-                              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Last name</label>
-                            <input type="text" id="last_name"
-                              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                              placeholder="Doe" required />
-                          </div>
-                          <div>
-                            <label for="Father_Name"
+                            <label for="father_name"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Father's Name</label>
-                            <input type="text" id="Father_Name"
+                            <input name="father_name" type="text" id="father_name"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Father's Name" required />
                           </div>
+
+                          <!-- Mother Name -->
                           <div>
-                            <label for="Mother_Name"
+                            <label for="mother_name"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mother's Name</label>
-                            <input type="text" id="Mother_Name"
+                            <input name="mother_name" type="text" id="mother_name"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Mother's Name" required />
                           </div>
+
+                          <!-- Date of Birth -->
                           <div>
-                            <label for="DoB" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Date
+                            <label for="dateOfBirth" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Date
                               of Birth</label>
-                            <input type="text" id="birth_date"
+                            <input name="dateOfBirth" type="date" id="dateOfBirth"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                              placeholder="Date of Birth" required />
+                              placeholder="Date of Birth" />
                           </div>
+
+                          <!-- Phone -->
                           <div>
                             <label for="phone"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone
                               number</label>
-                            <input type="number" name="phone" id="phone"
+                            <input name="phone" type="number" id="phone"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                              placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required />
+                              placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" />
                           </div>
+
+                          <!-- Blood Group -->
                           <div>
-                            <label for="NID" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Social
-                              ID(NID/Any Type of ID)</label>
-                            <input type="number" name="nid" id="nid"
+                            <label for="blood_group" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Blood Group</label>
+                            <input name="blood_group" type="text" id="blood_group"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                              placeholder="Social ID(NID/Any Type of ID)" required />
+                              placeholder="Blood Group" required />
                           </div>
+
+                          <!-- NID -->
                           <div>
-                            <label for="Passport"
+                            <label for="n_id" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">NID/Any Type of ID</label>
+                            <input name="n_id" type="number" id="n_id"
+                              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                              placeholder="NID/Any Type of ID" required />
+                          </div>
+
+                          <!-- Passport -->
+                          <div>
+                            <label for="passport"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Passport No.</label>
-                            <input type="number" name="passport" id="passport"
+                            <input name="passport" type="number" id="passport"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Passport No." required />
                           </div>
+
+                          <!-- EmergencyContact -->
                           <div>
                             <label for="EmergencyContact"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Emergency Contact
                               No.</label>
-                            <input type="number" name="emergency_contact"
+                            <input name="emergency" type="number" id="emergency"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                              placeholder="Emergency Contact No." required />
+                              placeholder="Emergency Contact No." />
                           </div>
+
+                          <!-- Email -->
                           <div>
                             <label for="email"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
                             <input type="email" name="email"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                              placeholder="email" required />
-                          </div>
-                          <div>
-                            <label for="WhatsApp"
-                              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">WhatsApp</label>
-                            <input type="number" name="whatsapp"
-                              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                              placeholder="WhatsApp" required />
-                          </div>
-                          <div>
-                            <label for="Linkedin Link"
-                              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Linkedin Link</label>
-                            <input type="text" name="linkedin"
-                              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                              placeholder="Linkedin Link" required />
-                          </div>
-                          <div>
-                            <label for="Facebook Link"
-                              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Facebook Link</label>
-                            <input type="text" name="facebook"
-                              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                              placeholder="Facebook Link" required />
+                              placeholder="email" />
                           </div>
 
+                          <!-- WhatsApp -->
                           <div>
-                            <label for="GitHub Link"
+                            <label for="whatsup"
+                              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">WhatsApp</label>
+                            <input name="whatsup" type="number" id="whatsup"
+                              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                              placeholder="WhatsApp" />
+                          </div>
+
+                          <!-- Linkedin -->
+                          <div>
+                            <label for="linkedin"
+                              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Linkedin Link</label>
+                            <input name="linkedin" type="text" id="linkedin"
+                              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                              placeholder="Linkedin Link" />
+                          </div>
+
+                          <!-- Facebook -->
+                          <div>
+                            <label for="facebook"
+                              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Facebook Link</label>
+                            <input name="facebook" type="text" id="facebook"
+                              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                              placeholder="Facebook Link" />
+                          </div>
+
+                          <!-- GitHub -->
+                          <div>
+                            <label for="gitHub"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">GitHub
                               Link</label>
-                            <input type="text" name="github"
+                            <input name="github" type="text" id="gitHub"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                              placeholder="GitHub Link" required />
+                              placeholder="GitHub Link" />
                           </div>
 
+                          <!-- Behance/Dribble Link -->
                           <div>
                             <label for="Behance/Dribble Link"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Behance/Dribble
                               Link</label>
-                            <input type="text" name="behance"
+                            <input type="text" name="behance" id="behance"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                              placeholder="Behance/Dribble Link" required />
+                              placeholder="Behance/Dribble Link" />
                           </div>
 
+                          <!-- Portfolio Website -->
                           <div>
                             <label for="Portfolio Website"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Portfolio
                               Website</label>
-                            <input type="text" name="portfolio"
+                            <input type="text" name="portfolio" id="portfolio"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                              placeholder="Portfolio Website" required />
+                              placeholder="Portfolio Website" />
                           </div>
 
+                          <!-- Save Button -->
                           <div class="flex items-center p-4 md:p-5 border-gray-200 rounded-b dark:border-gray-600">
-                            <a href="{{url('#')}}" type="button"
-                              class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Save</a>
+                            <button type="submit"
+                              class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Save</button>
                             <a href="{{url('#')}}" type="button"
                               class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Close</a>
                           </div>
                         </div>
-
-
-
-
-
                       </form>
-
                     </div>
                   </div>
 
@@ -197,52 +224,71 @@
                   </h2>
                   <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
                     <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-                      <form>
+                      
+                      <!-- CV Education Information -->
+                      <form method="POST" action="{{url('cvEducation')}}" enctype="multipart/form-data">
+                        @csrf
                         <div class="grid gap-6 mb-6 md:grid-cols-2">
+                          <!-- Hidden Input -->
+                          <input name="user_id" type="text" class="" value="2">
+                          <!-- Degree -->
                           <div>
                             <label for="degree" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Degree
                               Type</label>
-                            <select id="degree"
+                            <select name="degree" id="degree"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                               <option selected>Choose a Degree</option>
-                              <option value="SSC">Secondary</option>
-                              <option value="HSC">Higher Secondary</option>
-                              <option value="Bsc">Bachelore of Science</option>
-                              <option value="Bsc">Bachelore of Arts</option>
-                              <option value="Bsc">Degree</option>
-                              <option value="Msc">Masters of Science</option>
-                              <option value="MA">Masters</option>
+                              <option value="Secondary (SSC)">Secondary (SSC)</option>
+                              <option value="Higher Secondary (HSC)">Higher Secondary (HSC)</option>
+                              <option value="Bachelore of Science">Bachelore of Science</option>
+                              <option value="Bachelore of Arts">Bachelore of Arts</option>
+                              <option value="Degree">Degree</option>
+                              <option value="Masters of Science">Masters of Science</option>
+                              <option value="Masters">Masters</option>
                               <option value="PhD">PhD</option>
                             </select>
                           </div>
                           
+                          <!-- Institute Name -->
                           <div>
-                            <label for="Institute"
+                            <label for="school_university"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Institute Name</label>
-                            <input type="text" id="institute"
+                            <input name="school_university" type="text" id="school_university"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Institute Name" required />
                           </div>
         
+                          <!-- Department -->
                           <div>
-                            <label for="Department"
+                            <label for="department"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Department/Subject</label>
-                            <input type="text" name="department"
+                            <input name="department" type="text"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Department or Subject" required />
                           </div>
+
+                          <!-- Group -->
+                          <div>
+                            <label for="group"
+                              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Group</label>
+                            <input name="group" type="text" id="group"
+                              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                              placeholder="Group" />
+                          </div>
         
+                          <!-- Passing Year -->
                           <div>
                             <label for="Passing Year"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Passing Year</label>
-                            <input type="number" name="passingYear"
+                            <input name="passing_year" type="number" id="passing_year"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Passing Year" required />
                           </div>
         
+                          <!-- CGPA -->
                           <div>
                             <label for="CGPA" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">CGPA</label>
-                            <input type="number" name="cgpa"
+                            <input name="CGPA" type="number" id="CGPA"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="CGPA" required />
                           </div>
@@ -251,8 +297,8 @@
                           </div>
         
                           <div class="flex items-center p-4 md:p-5 border-gray-200 rounded-b dark:border-gray-600">
-                            <a href="{{url('#')}}" type="button"
-                              class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Save</a>
+                            <button type="submit"
+                              class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Save</button>
                             <a href="{{url('#')}}" type="button"
                               class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Close</a>
                           </div>

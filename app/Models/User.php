@@ -3,6 +3,7 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -34,21 +35,15 @@ public function company(): HasMany
     {
         return $this->hasMany(Company::class);
     }
+public function account(): HasOne
+    {
+        return $this->hasOne(Account::class);
+    }
+public function cv_basic(): HasOne
+    {
+        return $this->hasOne(Cv_Basic::class);
+    }
 
-    /* public function tasks(){
-        return $this->hasMany(Task::class);
-    } */
 
 
-  
-   /*  protected $hidden = [
-        'password',
-        'remember_token',
-    ]; */
-
-   
-    /* protected $casts = [
-        'email_verified_at' => 'datetime',
-        'password' => 'hashed',
-    ]; */
 }

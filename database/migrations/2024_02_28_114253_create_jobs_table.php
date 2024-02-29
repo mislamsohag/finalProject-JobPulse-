@@ -18,8 +18,11 @@ return new class extends Migration
             $table->string('response', 1000);
             $table->string('benefits',500);
             $table->string('education');
+            $table->enum('work_mode',['on site', 'remort']);
+            $table->enum('job_type',['part time', 'full time']);
             $table->string('qualification');
             $table->string('experience');
+            $table->string('age_range');
             $table->string('job_location');
             $table->string('salary');
             $table->string('deadline');

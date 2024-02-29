@@ -4,6 +4,7 @@ use App\Http\Controllers\AccountController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CompanyController;
 // use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\CvController;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\RuleController;
 use App\Http\Controllers\UsersController;
@@ -61,8 +62,18 @@ Route::POST('/jobPost', [JobController::class, 'jobPost']);
 
 // Candidate Routes
 Route::get('/accountPage', [AccountController::class, 'accountPage']);
+Route::POST('/accountCreate', [AccountController::class, 'accountCreate']);
+Route::get('/cvPage', [CvController::class, 'cvPage']);
+Route::get('/cvEditPage', [CvController::class, 'cvEditPage']);
+Route::POST('/cvBasic', [CvController::class, 'cvBasic']);
+Route::POST('/cvEducation', [CvController::class, 'cvEducation']);
 
 
+
+
+Route::get('/candidateJobs', function () {
+    return view('backend.candidate.candidateJobs');
+});
 
 
 Route::get('/profile', function () {
@@ -138,17 +149,6 @@ Route::get('/canDashboard', function () {
 });
 
 
-Route::get('/cv', function () {
-    return view('backend.candidate.cv');
-});
-
-Route::get('/cv_edit', function () {
-    return view('backend.candidate.cv_Edit');
-});
-
-Route::get('/candidateJobs', function () {
-    return view('backend.candidate.candidateJobs');
-});
 
 
 
