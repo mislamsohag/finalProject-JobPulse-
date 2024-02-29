@@ -46,7 +46,7 @@ class JobController extends Controller
                 'company_id'=>$request->input('company_id'),
                 'user_id'=>$request->input('user_id')
             ]);
-            return ResponseHelper::Out('success', 'Rule add successfully', 200);
+            return ResponseHelper::Out('success', 'Job post successfully', 200);
             
         }catch(Exception $e){
             return ResponseHelper::Out('failed', $e, 401);

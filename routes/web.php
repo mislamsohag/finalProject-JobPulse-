@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AccountController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CompanyController;
 // use App\Http\Controllers\ProfileController;
@@ -58,13 +59,16 @@ Route::POST('/companyEntry', [CompanyController::class, 'companyEntry']);
 Route::get('/jobPostPage', [JobController::class, 'jobPostPage']);
 Route::POST('/jobPost', [JobController::class, 'jobPost']);
 
+// Candidate Routes
+Route::get('/accountPage', [AccountController::class, 'accountPage']);
 
 
 
 
-Route::get('/account', function () {
-    return view('backend.pages.account');
+Route::get('/profile', function () {
+    return view('backend.pages.profile');
 });
+
 
 // Admin Routes
 Route::get('/dashboard', function () {
@@ -146,21 +150,10 @@ Route::get('/candidateJobs', function () {
     return view('backend.candidate.candidateJobs');
 });
 
-Route::get('/signin', function () {
-    return view('backend.pages.signin');
-});
-
-// Route::get("/signin", [CompanyController::class, "#"]);
-// Route::get("/signup", [CompanyController::class, "index"]);
 
 
 
 
-/* Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-}); */
 
 require __DIR__.'/auth.php';
 

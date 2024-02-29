@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Profile')
+@section('title', 'CV_Update')
 @section('content')
 
 <!-- content -->
