@@ -322,52 +322,57 @@
                   </h2>
                   <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
                     <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
-                      <form>
+                      
+                      <!-- CV Training Information -->
+                      <form method="POST" action="{{url('cvTraining')}}" enctype="multipart/form-data">
+                        @csrf
+
                         <div class="grid gap-6 mb-6 md:grid-cols-2">
+                          <!-- Hidden field -->
+                          <input name="user_id" type="text" class="" value="2"/>
+                          
+                          <!-- Training Name -->
                           <div>
-                            <label for="training Name"
+                            <label for="Training Name"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Training Name</label>
-                            <input type="text" name="training" id="training"
+                            <input name="training_name" type="text" id="training_name"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                              placeholder="training Name" required />
+                              placeholder="Training Name" required />
                           </div>
         
+                          <!-- Organization Name -->
                           <div>
                             <label for="organization"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Organization Name</label>
-                            <input type="text" id="organization"
+                            <input name="organization" type="text" id="organization"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Organization Name" required />
                           </div>
         
+                          <!-- Training Duration -->
                           <div>
-                            <label for="Duration"
-                              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Duration</label>
-                            <input type="text" name="duration"
+                            <label for="Training Duration"
+                              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Training Duration</label>
+                            <input name="duration" type="text" id="duration"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Type month or year" required />
                           </div>
         
+                          <!-- Passing Year -->
                           <div>
                             <label for="Passing Year"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Passing Year</label>
-                            <input type="number" name="passingYear"
+                            <input name="passing_year" type="number" id="passing_year"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Passing Year" required />
                           </div>
         
                           <div class="flex items-center p-4 md:p-5 border-gray-200 rounded-b dark:border-gray-600">
-                            <a href="{{url('#')}}" type="button"
-                              class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Save</a>
+                            <button type="submit"
+                              class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Save</button>
                             <a href="{{url('#')}}" type="button"
                               class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Close</a>
                           </div>
-                          
-                          
-                          
-                          
-                          
-                          
                         </div>
                       </form>
                     </div>

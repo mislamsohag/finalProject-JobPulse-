@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\CvEducation;
+use App\Models\CvTraining;
 use Exception;
 use App\Models\CvBasic;
 use Illuminate\Http\Request;
@@ -60,6 +61,26 @@ class CvController extends Controller
         }catch(Exception $e){
             return ResponseHelper::Out('failed', $e, 401);
         }
+    }
+
+    public function cvTraining(Request $request){
+        //  dd($request->input());
+
+        try{
+            CvTraining::updateOrCreate([
+                'training_name'=>$request->input('training_name'),
+                'organization'=>$request->input('organization'),
+                'duration'=>$request->input('duration'),
+                'passing_year'=>$request->input('passing_year'),
+                'user_id'=>$request->input('user_id'),
+            ]);
+            return ResponseHelper::Out('success', 'Training information save successfully', 200);
+            
+        }catch(Exception $e){
+            return ResponseHelper::Out('failed', $e, 401);
+        }
+
+        
     }
 
     
