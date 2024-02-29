@@ -68,6 +68,8 @@ Route::get('/cvEditPage', [CvController::class, 'cvEditPage']);
 Route::POST('/cvBasic', [CvController::class, 'cvBasic']);
 Route::POST('/cvEducation', [CvController::class, 'cvEducation']);
 Route::POST('/cvTraining', [CvController::class, 'cvTraining']);
+Route::POST('/cvExperience', [CvController::class, 'cvExperience']);
+Route::POST('/cvSkills', [CvController::class, 'cvSkills']);
 
 
 

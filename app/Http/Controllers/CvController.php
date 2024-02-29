@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\CvEducation;
+use App\Models\CvExperience;
+use App\Models\CvSkill;
 use App\Models\CvTraining;
 use Exception;
 use App\Models\CvBasic;
@@ -78,10 +80,44 @@ class CvController extends Controller
             
         }catch(Exception $e){
             return ResponseHelper::Out('failed', $e, 401);
-        }
-
-        
+        }        
     }
 
+    public function cvExperience(Request $request){
+        //  dd($request->input());
+
+        try{
+            CvExperience::updateOrCreate([
+                'company_name'=>$request->input('company_name'),
+                'designation'=>$request->input('designation'),
+                'joining_date'=>$request->input('joining_date'),
+                'departure_date'=>$request->input('departure_date'),
+                'user_id'=>$request->input('user_id'),
+            ]);
+            return ResponseHelper::Out('success', 'Experiences information save successfully', 200);
+            
+        }catch(Exception $e){
+            return ResponseHelper::Out('failed', $e, 401);
+        }        
+    }
+
+    public function cvSkills(Request $request){
+        //  dd($request->input());
+
+        try{
+            CvSkill::updateOrCreate([
+                'skills'=>$request->input('skills'),
+                'current_salary'=>$request->input('current_salary'),
+                'axpected_salary'=>$request->input('axpected_salary'),
+                
+                'user_id'=>$request->input('user_id'),
+            ]);
+            return ResponseHelper::Out('success', 'Experiences information save successfully', 200);
+            
+        }catch(Exception $e){
+            return ResponseHelper::Out('failed', $e, 401);
+        }        
+    }
+    
     
 }

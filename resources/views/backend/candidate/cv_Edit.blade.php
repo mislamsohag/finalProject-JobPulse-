@@ -15,7 +15,7 @@
             <div class="min-w-2/12">
               <img class=" object-cover w-32 rounded-t-lg h-32 md:h-32 md:w-32 md:rounded-none md:rounded-s-lg"
                 src="{{asset('/images/sohagTech_logo.png')}}" alt="Candidate Picture">
-              
+
             </div>
           </div>
           <!-- main content -->
@@ -56,9 +56,9 @@
                           </div>
 
                           <!-- Hidden Id's -->
-                          <input name="user_id" type="text" value="2" class="" id="user_id"/>
-                          <input name="account_id" type="text" value="1" class="" id="account_id"/>
-                          
+                          <input name="user_id" type="text" value="2" class="" id="user_id" />
+                          <input name="account_id" type="text" value="1" class="" id="account_id" />
+
                           <!-- Father_Name -->
                           <div>
                             <label for="father_name"
@@ -79,7 +79,8 @@
 
                           <!-- Date of Birth -->
                           <div>
-                            <label for="dateOfBirth" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Date
+                            <label for="dateOfBirth"
+                              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Date
                               of Birth</label>
                             <input name="dateOfBirth" type="date" id="dateOfBirth"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -98,7 +99,8 @@
 
                           <!-- Blood Group -->
                           <div>
-                            <label for="blood_group" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Blood Group</label>
+                            <label for="blood_group"
+                              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Blood Group</label>
                             <input name="blood_group" type="text" id="blood_group"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Blood Group" required />
@@ -106,7 +108,9 @@
 
                           <!-- NID -->
                           <div>
-                            <label for="n_id" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">NID/Any Type of ID</label>
+                            <label for="n_id"
+                              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">NID/Any Type of
+                              ID</label>
                             <input name="n_id" type="number" id="n_id"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="NID/Any Type of ID" required />
@@ -224,7 +228,7 @@
                   </h2>
                   <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
                     <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-                      
+
                       <!-- CV Education Information -->
                       <form method="POST" action="{{url('cvEducation')}}" enctype="multipart/form-data">
                         @csrf
@@ -233,7 +237,8 @@
                           <input name="user_id" type="text" class="" value="2">
                           <!-- Degree -->
                           <div>
-                            <label for="degree" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Degree
+                            <label for="degree"
+                              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Degree
                               Type</label>
                             <select name="degree" id="degree"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
@@ -248,16 +253,17 @@
                               <option value="PhD">PhD</option>
                             </select>
                           </div>
-                          
+
                           <!-- Institute Name -->
                           <div>
                             <label for="school_university"
-                              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Institute Name</label>
+                              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Institute
+                              Name</label>
                             <input name="school_university" type="text" id="school_university"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Institute Name" required />
                           </div>
-        
+
                           <!-- Department -->
                           <div>
                             <label for="department"
@@ -275,7 +281,7 @@
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Group" />
                           </div>
-        
+
                           <!-- Passing Year -->
                           <div>
                             <label for="Passing Year"
@@ -284,10 +290,11 @@
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Passing Year" required />
                           </div>
-        
+
                           <!-- CGPA -->
                           <div>
-                            <label for="CGPA" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">CGPA</label>
+                            <label for="CGPA"
+                              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">CGPA</label>
                             <input name="CGPA" type="number" id="CGPA"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="CGPA" required />
@@ -295,7 +302,7 @@
                           <div>
                             <!-- For coloumn maching -->
                           </div>
-        
+
                           <div class="flex items-center p-4 md:p-5 border-gray-200 rounded-b dark:border-gray-600">
                             <button type="submit"
                               class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Save</button>
@@ -322,15 +329,15 @@
                   </h2>
                   <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
                     <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
-                      
+
                       <!-- CV Training Information -->
                       <form method="POST" action="{{url('cvTraining')}}" enctype="multipart/form-data">
                         @csrf
 
                         <div class="grid gap-6 mb-6 md:grid-cols-2">
                           <!-- Hidden field -->
-                          <input name="user_id" type="text" class="" value="2"/>
-                          
+                          <input name="user_id" type="text" class="" value="2" />
+
                           <!-- Training Name -->
                           <div>
                             <label for="Training Name"
@@ -339,25 +346,27 @@
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Training Name" required />
                           </div>
-        
+
                           <!-- Organization Name -->
                           <div>
                             <label for="organization"
-                              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Organization Name</label>
+                              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Organization
+                              Name</label>
                             <input name="organization" type="text" id="organization"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Organization Name" required />
                           </div>
-        
+
                           <!-- Training Duration -->
                           <div>
                             <label for="Training Duration"
-                              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Training Duration</label>
+                              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Training
+                              Duration</label>
                             <input name="duration" type="text" id="duration"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Type month or year" required />
                           </div>
-        
+
                           <!-- Passing Year -->
                           <div>
                             <label for="Passing Year"
@@ -366,7 +375,7 @@
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Passing Year" required />
                           </div>
-        
+
                           <div class="flex items-center p-4 md:p-5 border-gray-200 rounded-b dark:border-gray-600">
                             <button type="submit"
                               class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Save</button>
@@ -393,49 +402,62 @@
                   </h2>
                   <div id="accordion-collapse-body-4" class="hidden" aria-labelledby="accordion-collapse-heading-4">
                     <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
-                      <form>
+
+                      <!-- Job Experiences -->
+                      <form method="POST" action="{{url('cvExperience')}}" enctype="multipart/form-data">
+                        @csrf
+
                         <div class="grid gap-6 mb-6 md:grid-cols-2">
-                          <div>
-                            <label for="Designation"
-                              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Designation</label>
-                            <input type="text" name="designation" id="designation"
-                              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                              placeholder="Designation" required />
-                          </div>
-        
+                          <!-- Hidden Field -->
+                          <input name="user_id" type="text" value="2" class="" id="user_id" />
+
+                          <!-- Company Name -->
                           <div>
                             <label for="Company Name"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Company Name</label>
-                            <input type="text" name="company" id="company"
+                            <input name="company_name" type="text" id="company_name"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Company Name" required />
                           </div>
-        
+
+                          <!-- Designation -->
                           <div>
-                            <label for="join" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Joining
+                            <label for="Designation"
+                              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Designation</label>
+                            <input name="designation" type="text" id="designation"
+                              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                              placeholder="Designation" required />
+                          </div>
+
+                          <!-- Joining Date -->
+                          <div>
+                            <label for="Joining Date"
+                              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Joining Date</label>
+                            <input name="joining_date" type="date" id="joining_date"
+                              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                          </div>
+
+                          <!-- Departure Date -->
+                          <div>
+                            <label for="departure_date"
+                              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Departure
                               Date</label>
-                            <input type="date" name="join_date"
+                            <input name="departure_date" type="date" id="departure_date"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                           </div>
-        
-                          <div>
-                            <label for="departure"
-                              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Departure Date</label>
-                            <input type="date" name="departure_date"
-                              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                          </div>
-        
+
+                          <!-- Save Button -->
                           <div class="flex items-center p-4 md:p-5 border-gray-200 rounded-b dark:border-gray-600">
-                            <a href="{{url('#')}}" type="button"
-                              class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Save</a>
+                            <button type="submit"
+                              class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Save</button>
                             <a href="{{url('#')}}" type="button"
                               class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Close</a>
                           </div>
-                          
-                          
-                          
-                          
-                          
+
+
+
+
+
                         </div>
                       </form>
                     </div>
@@ -456,36 +478,47 @@
                   </h2>
                   <div id="accordion-collapse-body-5" class="hidden" aria-labelledby="accordion-collapse-heading-5">
                     <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
-                      <form>
+                      
+                      <!-- CV Skills -->
+                      <form method="POST" action="{{url('cvSkills')}}" enctype="multipart/form-data">
+                        @csrf
                         <div class="grid gap-6 mb-6 md:grid-cols-2">
+                          <!-- Hidden Field -->
+                          <input name="user_id" type="text" id="user_id" value="2"/>
+                          
                           <div>
-                            <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Type your skill within comma</label>
-                            <textarea id="message" rows="4"
+                            <label for="skills"
+                              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Type your skill
+                              within comma</label>
+                            <textarea name="skills" id="skills" rows="1"
                               class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                              placeholder="Write your skill with comma"></textarea>  
+                              placeholder="Write your skill with comma"></textarea>
                           </div>
-        
+
+                          <!-- Current Salary -->
                           <div>
                             <label for="Current Salary"
-                              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Current Salary (if any)</label>
-                            <input type="text" name="currentSalary"
+                              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Current Salary (if
+                              any)</label>
+                            <input name="current_salary" type="text"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                              placeholder="Current Salary" required />
+                              placeholder="Current Salary" />
                           </div>
-        
+
+                          <!-- Axpected Salary -->
                           <div>
-                            <label for="Aspect Salary"
-                              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Aspect Salary</label>
-                            <input type="text" name="aspectSalary"
+                            <label for="Axpected Salary"
+                              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Axpected Salary</label>
+                            <input name="axpected_salary" type="text" id="axpect_salary"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Axpected Salary" required />
                           </div>
-        
-                          <div></div>        
-        
+
+                          <div></div>
+
                           <div class="flex items-center p-4 md:p-5 border-gray-200 rounded-b dark:border-gray-600">
-                            <a href="{{url('#')}}" type="button"
-                              class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Save</a>
+                            <button type="submit"
+                              class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Save</button>
                             <a href="{{url('#')}}" type="button"
                               class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Close</a>
                           </div>
