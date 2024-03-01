@@ -1,111 +1,92 @@
 <!-- Footer Section Start -->
 <footer class="bg-white dark:bg-gray-800">
-    <div class="max-w-screen-xl py-4">
-        <div class="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-5">
+    <div class="max-w-screen-xl py-2">
+        <div class="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4">
             <div>
-                <h3 class="mb-6 text-sm font-semibold text-fuchsia-900 uppercase dark:text-white">Company</h3>
+                <h3 class="mb-4 text-sm font-semibold text-fuchsia-900 uppercase dark:text-white">Company</h3>
                 <ul class="text-gray-500 dark:text-gray-400">
-                    <li class="mb-4">
+                    <li class="mb-2">
                         <a href="{{url('/about')}}" class=" hover:underline">About Job Puls</a>
                     </li>
-                    <li class="mb-4">
+                    <li class="mb-2">
                         <a href="{{('/termsCondition')}}" class="hover:underline">Terms & Conditions</a>
                     </li>
-                    <li class="mb-4">
+                    <li class="mb-2">
                         <a href="{{('/privacyPolicy')}}" class="hover:underline">Privacy Policy</a>
                     </li>
-                    <li class="mb-4">
-                        <a href="{{('/feadback')}}" class="hover:underline">Feedback</a>
-                    </li>
-                    <li class="mb-4">
+                    
+                    <li class="mb-2">
                         <a href="{{url('/contact')}}" class="hover:underline">Contact Us</a>
                     </li>
                 </ul>
             </div>
             <div>
-                <h3 class="mb-6 text-sm font-semibold text-fuchsia-900 uppercase dark:text-white">Help center</h3>
+                <h3 class="mb-4 text-sm font-semibold text-fuchsia-900 uppercase dark:text-white">Help center</h3>
                 <ul class="text-gray-500 dark:text-gray-400">
-                    <li class="mb-4">
-                        <a href="#" class="hover:underline">Discord Server</a>
-                    </li>
-                    <li class="mb-4">
+                    
+                    <li class="mb-2">
                         <a href="#" class="hover:underline">X</a>
                     </li>
-                    <li class="mb-4">
+                    <li class="mb-2">
                         <a href="#" class="hover:underline">Facebook</a>
                     </li>
-                    <li class="mb-4">
+                    <li class="mb-2">
                         <a href="#" class="hover:underline">Youtube</a>
                     </li>
-                    <li class="mb-4">
+                    <li class="mb-2">
                         <a href="#" class="hover:underline">LinkedIn</a>
                     </li>
-                    <li class="mb-4">
+                    <li class="mb-2">
                         <a href="#" class="hover:underline">Instagram</a>
                     </li>
                 </ul>
             </div>
+            
             <div>
-                <h3 class="mb-6 text-sm font-semibold text-fuchsia-900 uppercase dark:text-white">Legal</h3>
+                <h3 class="mb-4 text-sm font-semibold text-fuchsia-900 uppercase dark:text-white">Company</h3>
                 <ul class="text-gray-500 dark:text-gray-400">
-                    <li class="mb-4">
-                        <a href="#" class="hover:underline">Privacy Policy</a>
-                    </li>
-                    <li class="mb-4">
-                        <a href="#" class="hover:underline">Licensing</a>
-                    </li>
-                    <li class="mb-4">
-                        <a href="#" class="hover:underline">Terms</a>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="mb-6 text-sm font-semibold text-fuchsia-900 uppercase dark:text-white">Company</h3>
-                <ul class="text-gray-500 dark:text-gray-400">
-                    <li class="mb-4">
+                    <li class="mb-2">
                         <a href="#" class=" hover:underline">Create Account</a>
                     </li>
-                    <li class="mb-4">
+                    <li class="mb-2">
                         <a href="#" class="hover:underline">Post a Job</a>
                     </li>                    
-                    <li class="mb-4">
+                    <li class="mb-2">
                         <a href="#" class="hover:underline">Download App</a>
                     </li>
-                    <li class="mb-4">
+                    <li class="mb-2">
                         <a href="#" class="hover:underline">Download IOS</a>
                     </li>
-                    <li class="mb-4">
+                    <li class="mb-2">
                         <a href="#" class="hover:underline">FAQ</a>
                     </li>
                 </ul>
             </div>
             <div>
-                <h3 class="mb-6 text-sm font-semibold text-fuchsia-900 uppercase dark:text-white">Candidate</h3>
+                <h3 class="mb-4 text-sm font-semibold text-fuchsia-900 uppercase dark:text-white">Candidate</h3>
                 <ul class="text-gray-500 dark:text-gray-400">
-                    <li class="mb-4">
+                    <li class="mb-2">
                         <a href="#" class="hover:underline">Create Account</a>
                     </li>
-                    <li class="mb-4">
+                    <li class="mb-2">
                         <a href="#" class="hover:underline">Video CV</a>
                     </li>
-                    <li class="mb-4">
+                    <li class="mb-2">
                         <a href="#" class="hover:underline">My Panel</a>
                     </li>
-                    <li class="mb-4">
-                        <a href="#" class="hover:underline">Career Counseling</a>
-                    </li>
-                    <li class="mb-4">
+                    
+                    <li class="mb-2">
                         <a href="#" class="hover:underline">Video Guides</a>
                     </li>
-                    <li class="mb-4">
+                    <li class="mb-2">
                         <a href="#" class="hover:underline">FAQ</a>
                     </li>
                 </ul>
             </div>
         </div>
-        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8">
+        <hr class="my-4 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8">
         <div class="text-center">
-            <a href="#"
+            <a href="{{url('home')}}"
                 class="flex items-center justify-center mb-5 text-2xl font-semibold text-fuchsia-900 dark:text-white">
                 <img src="{{asset('images/sohagTech_logo.png')}}" class="h-6 mr-3 sm:h-9" alt="Logo" />
                 Job Pulse
@@ -114,7 +95,7 @@
                 Rights Reserved.</a>
             </span>
 
-            <ul class="flex justify-center mt-5 space-x-5">
+            <ul class="flex justify-center mt-3 space-x-5">
                 <li>
                     <a href="#" class="text-gray-500 hover:text-fuchsia-900 dark:hover:text-white dark:text-gray-400">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">

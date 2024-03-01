@@ -5,35 +5,17 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CompanyController;
 // use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CvController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\RuleController;
 use App\Http\Controllers\UsersController;
 use App\Http\Middleware\TokenVerificationMiddleware;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('frontend.pages.home');
-});
-Route::get('/home', function () {
-    return view('frontend.pages.home');
-});
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/home', [HomeController::class, 'index']);
 
-Route::get('/about', function () {
-    return view('frontend.pages.about');
-});
-
-Route::get('/jobs', function () {
-    return view('frontend.pages.jobs');
-});
-
-Route::get('/blogs', function () {
-    return view('frontend.pages.blogs');
-});
-
-Route::get('/contact', function () {
-    return view('frontend.pages.contact');
-});
-
+// Auth Related Routes
 Route::get("/registrationPage", [UsersController::class, "registrationPage"]);
 Route::get("/loginPage", [UsersController::class, "loginPage"]);
 Route::get("/forgetPage", [UsersController::class, "forgetPage"]);
@@ -57,8 +39,9 @@ Route::get('/companyAddPage', [CompanyController::class, 'companyAddPage']);
 Route::POST('/companyEntry', [CompanyController::class, 'companyEntry']);
 
 // Job Routes
-Route::get('/jobPostPage', [JobController::class, 'jobPostPage']);
-Route::POST('/jobPost', [JobController::class, 'jobPost']);
+Route::get('/jobs', [JobController::class, 'index']);
+Route::get('/jobPostPage', [JobController::class, 'jobPostPage'])->middleware([TokenVerificationMiddleware::class]);
+Route::POST('/jobPost', [JobController::class, 'jobPost'])->middleware([TokenVerificationMiddleware::class]);
 
 // Candidate Routes
 Route::get('/accountPage', [AccountController::class, 'accountPage']);
@@ -73,7 +56,19 @@ Route::POST('/cvSkills', [CvController::class, 'cvSkills']);
 
 
 
+Route::get('/about', function () {
+    return view('frontend.pages.about');
+});
 
+
+
+Route::get('/blogs', function () {
+    return view('frontend.pages.blogs');
+});
+
+Route::get('/contact', function () {
+    return view('frontend.pages.contact');
+});
 Route::get('/candidateJobs', function () {
     return view('backend.candidate.candidateJobs');
 });

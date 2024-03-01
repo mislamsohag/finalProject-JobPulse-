@@ -8,6 +8,7 @@
         <form method="POST" action="{{url('jobPost')}}">
             @csrf
             <div class="grid gap-6 mb-6 md:grid-cols-2">
+                <!-- Job Title -->
                 <div>
                     <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Job
                         Title</label>
@@ -16,6 +17,7 @@
                         placeholder="Job title" required />
                 </div>
 
+                <!-- Job description -->
                 <div>
                     <label for="Job description"
                         class="block my-2 text-sm font-medium text-gray-900 dark:text-white">Job
@@ -25,6 +27,7 @@
                         placeholder="Job Description"></textarea>
                 </div>
 
+                <!-- Job Response -->
                 <div>
                     <label for="response" class="block my-2 text-sm font-medium text-gray-900 dark:text-white">Job
                         response</label>
@@ -33,6 +36,7 @@
                         placeholder="Job response"></textarea>
                 </div>
 
+                <!-- Job Benefits -->
                 <div>
                     <label for="Benefits"
                         class="block my-2 text-sm font-medium text-gray-900 dark:text-white">Benefits</label>
@@ -41,14 +45,42 @@
                         placeholder="Job Benefits"></textarea>
                 </div>
 
+                <!-- Education -->
                 <div>
                     <label for="Education"
-                        class="block mb-2 my-2 text-sm font-medium text-gray-900 dark:text-white">Education</label>
+                        class="block mb-2 my-2 text-sm font-medium text-gray-900 dark:text-white">Education Need</label>
                     <input name="education" type="text"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         placeholder="Education" required />
                 </div>
 
+                <!-- Wrok Mode -->
+                <div>
+                    <label for="work_mode"
+                        class="block mb-2 my-2 text-sm font-medium text-gray-900 dark:text-white">Select Work
+                        Mode</label>
+                    <select name="work_mode" id="work_mode"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option selected>Choose a Work Mode</option>
+                        <option value="on site">On site</option>
+                        <option value="remort">Remort</option>
+                    </select>
+                </div>
+
+                <!-- Job Type -->
+                <div>
+                    <label for="job_type"
+                        class="block mb-2 my-2 text-sm font-medium text-gray-900 dark:text-white">Select Job
+                        Type</label>
+                    <select name="job_type" id="job_type"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option selected>Choose a Job Type</option>
+                        <option value="part time">Part time</option>
+                        <option value="Full time">Full time</option>
+                    </select>
+                </div>
+
+                <!-- Qualification -->
                 <div>
                     <label for="Qualification"
                         class="block mb-2 my-2 text-sm font-medium text-gray-900 dark:text-white">Qualification</label>
@@ -57,6 +89,7 @@
                         placeholder="Qualification" required />
                 </div>
 
+                <!-- Experience -->
                 <div>
                     <label for="Experience"
                         class="block mb-2 my-2 text-sm font-medium text-gray-900 dark:text-white">Experience</label>
@@ -65,6 +98,16 @@
                         placeholder="Experience" required />
                 </div>
 
+                <!-- Age Range -->
+                <div>
+                    <label for="age_range" class="block mb-2 my-2 text-sm font-medium text-gray-900 dark:text-white">Age
+                        Range</label>
+                    <input name="age_range" type="text" id="age_range"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Age Range" required />
+                </div>
+
+                <!-- Job Location -->
                 <div>
                     <label for="Job Location"
                         class="block mb-2 my-2 text-sm font-medium text-gray-900 dark:text-white">Job
@@ -74,14 +117,16 @@
                         placeholder="Job Location" required />
                 </div>
 
+                <!-- Salary -->
                 <div>
-                    <label for="Salary"
-                        class="block mb-2 my-2 text-sm font-medium text-gray-900 dark:text-white">Salary</label>
+                    <label for="Salary" class="block mb-2 my-2 text-sm font-medium text-gray-900 dark:text-white">Salary
+                        Range</label>
                     <input name="salary" type="text"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         placeholder="Salary" required />
                 </div>
 
+                <!-- Deadlin -->
                 <div>
                     <label for="deadline"
                         class="block mb-2 my-2 text-sm font-medium text-gray-900 dark:text-white">Deadline</label>
@@ -90,33 +135,34 @@
                         placeholder="deadline" required />
                 </div>
 
+                <!-- Category ID -->
                 <div>
                     <label for="Category ID"
-                        class="block mb-2 my-2 text-sm font-medium text-gray-900 dark:text-white">Category
-                        ID</label>
-                    <input name="category_id" type="text"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="Category ID" required />
+                        class="block mb-2 my-2 text-sm font-medium text-gray-900 dark:text-white">Category</label>
+                    <select name="category_id" id="category_id"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        
+                        <option selected>Choose a Category</option>
+                        @foreach($categories as $category)
+                        <option value="{{$category->id}}">{{$category->name}}</option>
+                        @endforeach
+                    </select>
                 </div>
-
+                <!-- Company ID -->
                 <div>
                     <label for="Company ID"
-                        class="block mb-2 my-2 text-sm font-medium text-gray-900 dark:text-white">Company
-                        ID</label>
-                    <input name="company_id" type="text"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="Company ID" required />
+                        class="block mb-2 my-2 text-sm font-medium text-gray-900 dark:text-white">Company Name</label>
+                    <select name="company_id" id="company_id"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option selected>Choose a Company</option>
+                        @foreach($companies as $company)
+                        <option value="{{$company->id}}">{{$company->company_name}}</option>
+                        @endforeach
+                    </select>
                 </div>
+                
 
-                <div>
-                    <label for="User ID" class="block mb-2 my-2 text-sm font-medium text-gray-900 dark:text-white">User
-                        ID</label>
-                    <input name="user_id" type="text"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="User ID" required />
-                </div>
-
-                <div></div>
+                <!-- Button submit -->
                 <div class="float-right">
                     <button type="submit"
                         class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 my-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Post</button>

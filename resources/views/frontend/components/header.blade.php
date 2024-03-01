@@ -1,7 +1,7 @@
 <header class="fixed w-full">
     <nav class="bg-white border-gray-200 py-2.5 dark:bg-gray-900">
         <div class="flex flex-wrap items-center justify-between max-w-screen-xl">
-            <a href="#" class="flex items-center">
+            <a href="home" class="flex items-center">
                 <img src="{{asset('./images/sohagTech_logo.png')}}" class="h-6 mr-3 sm:h-9" alt="Landwind Logo" />
                 <span class="self-center text-xl font-semibold whitespace-nowrap text-fuchsia-900 dark:text-white">Job Pulse</span>
             </a>
@@ -17,7 +17,7 @@
 
                 <!-- Login Button Dropdown menu -->
                 <div id="dropdownHover"
-                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-80 dark:bg-gray-700">
+                    class="hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-80 dark:bg-gray-700">
                     <ul class="py-2 px-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownHoverButton">
                         <li>
                             <div
@@ -32,7 +32,7 @@
                                     <div class="flex mt-1 md:mt-2">
                                         <a href="{{url('loginPage')}}"
                                             class="inline-flex items-center px-2 py-1 text-sm font-medium text-center text-white bg-fuchsia-700 rounded-lg hover:bg-fuchsia-800 focus:ring-4 focus:outline-none focus:ring-fuchsia-300 dark:bg-fuchsia-600 dark:hover:bg-fuchsia-700 dark:focus:ring-fuchsia-800">Login</a>
-                                        <a href="{{url('registrationPage')}}"
+                                        <a href="{{url('accountPage')}}"
                                             class="py-2 px-4 ms-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-sm border border-gray-200 hover:bg-gray-100 hover:text-fuchsia-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Registration</a>
                                     </div>
                                 </div>
