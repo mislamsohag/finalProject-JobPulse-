@@ -19,17 +19,17 @@ class UsersController extends Controller
 
     // Display the registration view.
 
-    public function registrationPage()
+    public function adminSignupPage()
     {
-        return view('backend.pages.registrationPage');
+        return view('auth.adminSignupPage');
     }
 
     public function loginPage()
     {
-        return view('backend.pages.loginPage');
+        return view('auth.loginPage');
     }
     public function forgetPage(){
-        return view('backend.pages.forgetPage');
+        return view('auth.forgetPage');
     }
     public function verifyOtpPage(){
         return view('auth.verifyOtpPage');

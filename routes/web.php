@@ -3,7 +3,6 @@
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CompanyController;
-// use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CvController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\JobController;
@@ -16,7 +15,7 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/home', [HomeController::class, 'index']);
 
 // Auth Related Routes
-Route::get("/registrationPage", [UsersController::class, "registrationPage"]);
+Route::get("/adminSignupPage", [UsersController::class, "adminSignupPage"]);
 Route::get("/loginPage", [UsersController::class, "loginPage"]);
 Route::get("/forgetPage", [UsersController::class, "forgetPage"]);
 Route::get("/verifyOtpPage", [UsersController::class, "verifyOtpPage"]);
@@ -35,7 +34,7 @@ Route::POST("/addCategory", [CategoryController::class, "addCategory"])->middlew
 
 // Company Routes
 Route::get('/companies', [CompanyController::class, 'companies']);
-Route::get('/companyAddPage', [CompanyController::class, 'companyAddPage']);
+Route::get('/companySignupPage', [CompanyController::class, 'companySignupPage']);
 Route::POST('/companyEntry', [CompanyController::class, 'companyEntry']);
 
 // Job Routes
@@ -46,13 +45,13 @@ Route::POST('/jobPost', [JobController::class, 'jobPost'])->middleware([TokenVer
 // Candidate Routes
 Route::get('/accountPage', [AccountController::class, 'accountPage']);
 Route::POST('/accountCreate', [AccountController::class, 'accountCreate']);
-Route::get('/cvPage', [CvController::class, 'cvPage']);
-Route::get('/cvEditPage', [CvController::class, 'cvEditPage']);
-Route::POST('/cvBasic', [CvController::class, 'cvBasic']);
-Route::POST('/cvEducation', [CvController::class, 'cvEducation']);
-Route::POST('/cvTraining', [CvController::class, 'cvTraining']);
-Route::POST('/cvExperience', [CvController::class, 'cvExperience']);
-Route::POST('/cvSkills', [CvController::class, 'cvSkills']);
+Route::get('/cvPage', [CvController::class, 'cvPage'])->middleware([TokenVerificationMiddleware::class]);
+Route::get('/cvEditPage', [CvController::class, 'cvEditPage'])->middleware([TokenVerificationMiddleware::class]);
+Route::POST('/cvBasic', [CvController::class, 'cvBasic'])->middleware([TokenVerificationMiddleware::class]);
+Route::POST('/cvEducation', [CvController::class, 'cvEducation'])->middleware([TokenVerificationMiddleware::class]);
+Route::POST('/cvTraining', [CvController::class, 'cvTraining'])->middleware([TokenVerificationMiddleware::class]);
+Route::POST('/cvExperience', [CvController::class, 'cvExperience'])->middleware([TokenVerificationMiddleware::class]);
+Route::POST('/cvSkills', [CvController::class, 'cvSkills'])->middleware([TokenVerificationMiddleware::class]);
 
 
 

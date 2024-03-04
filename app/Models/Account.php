@@ -19,6 +19,10 @@ class Account extends Model
         'img'
     ];
 
+    protected $casts = [
+        'dateOfBirth' => 'datetime:Y-m-d',
+      ];
+
     public function user(): BelongsTo
     {
         return $this->BelongsTo(User::class);

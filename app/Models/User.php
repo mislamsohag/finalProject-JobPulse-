@@ -41,7 +41,23 @@ public function account(): HasOne
     }
 public function cv_basic(): HasOne
     {
-        return $this->hasOne(Cv_Basic::class);
+        return $this->hasOne(CvBasic::class);
+    }
+public function cv_education(): HasOne
+    {
+        return $this->hasOne(CvEducation::class);
+    }
+public function cv_experience(): HasOne
+    {
+        return $this->hasOne(CvExperience::class);
+    }
+public function cv_training(): HasOne
+    {
+        return $this->hasOne(CvTraining::class);
+    }
+public function cv_skill(): HasOne
+    {
+        return $this->hasOne(CvSkill::class);
     }
 
 

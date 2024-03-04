@@ -13,8 +13,8 @@ class CvSkill extends Model
     protected $fillable=[
         'skills',
         'current_salary',
-        'axpected_salary',
-        'user_id',
+        'expected_salary',
+        'user_id'
     ];
 
 

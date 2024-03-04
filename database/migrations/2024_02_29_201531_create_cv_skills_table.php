@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('skills', 500);
             $table->string('current_salary', 20)->nullable();
-            $table->string('axpected_salary', 20);
+            $table->string('expected_salary', 20);
            
             $table->unsignedBigInteger('user_id');
            

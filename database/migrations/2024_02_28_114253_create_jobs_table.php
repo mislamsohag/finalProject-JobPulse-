@@ -22,6 +22,7 @@ return new class extends Migration
             $table->enum('job_type',['part time', 'full time']);
             $table->string('qualification');
             $table->string('experience');
+            $table->string('vacancy');
             $table->string('age_range');
             $table->string('job_location');
             $table->string('salary');

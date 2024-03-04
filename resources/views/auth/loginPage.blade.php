@@ -41,7 +41,8 @@
                   <div class="p-6 px-1 pt-0 text-center bg-transparent border-t-0 border-t-solid rounded-b-2xl lg:px-2">
                     <p class="mx-auto mb-6 leading-normal text-sm">
                       Don't have an account?
-                      <a href="{{url('registrationPage')}}" class="relative z-10 font-semibold text-transparent bg-gradient-to-tl from-blue-600 to-cyan-400 bg-clip-text">Sign up</a>
+                      <a href="{{url('companySignupPage')}}" class="relative z-10 font-semibold text-transparent border p-1 bg-gradient-to-tl from-fuchsia-700 to-cyan-500 bg-clip-text">Company</a>
+                      <a href="{{url('accountPage')}}" class="relative z-10 font-semibold text-transparent border p-1 bg-gradient-to-tl from-gray-700 to-cyan-500 bg-clip-text">Candidate</a>
                     </p>
                   </div>
                 </div>

@@ -21,6 +21,7 @@ class Job extends Model
         'age_range',
         'qualification',
         'experience',
+        'vacancy',
         'job_location',
         'salary',
         'deadline',
@@ -28,6 +29,10 @@ class Job extends Model
         'company_id',
         'user_id'
     ];
+
+    protected $casts = [
+        'deadline' => 'datetime:Y-m-d',
+      ];
 
     public function company(): BelongsTo
     {

@@ -16,22 +16,7 @@
             <div class="flex flex-col justify-between p-4 leading-normal w-full">
 
               <form method="post" action="{{url('accountCreate')}}" enctype="multipart/form-data">
-                <div class="flex justify-center items-center">
-                  <!-- Candidate Image -->
-                  <div class="flex-initial w-10/12">
-                    <img id="img"
-                      class=" object-cover w-32 rounded-t-lg h-32 md:h-32 md:w-32 md:rounded-none md:rounded-s-lg"
-                      src="{{asset('/images/sohagTech_logo.png')}}" alt="Candidate Picture">
-
-                    <input name="img" type="file">
-                  </div>
-                  <!-- Submit Button -->
-                  <div class="flex-initial w-2/12 ">
-                    <button type="submit"
-                      class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-bold rounded-lg text-sm px-6 py-2 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Save</button>
-                  </div>
-                </div>
-
+                
                 <!-- Name candidate -->
                 <div class="grid gap-2 mb-6 md:grid-cols-2 mt-6">
                   <span class="mb-2 leading-tight text-sm">Full Name : <span
@@ -88,6 +73,23 @@
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                     </span></span>
                 </div>
+
+                <div class="flex justify-center items-center">
+                  <!-- Candidate Image -->
+                  <div class="flex-initial w-10/12">
+                    <img id="img"
+                      class=" object-cover w-32 rounded-t-lg h-32 md:h-32 md:w-32 md:rounded-none md:rounded-s-lg"
+                      src="{{asset('/images/sohagTech_logo.png')}}" alt="Candidate Picture">
+
+                    <input name="img" type="file">
+                  </div>
+                  <!-- Submit Button -->
+                  <div class="flex-initial w-2/12 ">
+                    <button type="submit"
+                      class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-bold rounded-lg text-sm px-6 py-2 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Create Account</button>
+                  </div>
+                </div>
+
               </form>
             </div>
           </div>

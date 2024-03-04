@@ -2,8 +2,10 @@
 <footer class="bg-white dark:bg-gray-800">
     <div class="max-w-screen-xl py-2">
         <div class="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4">
+            
+            <!-- Companies Section -->
             <div>
-                <h3 class="mb-4 text-sm font-semibold text-fuchsia-900 uppercase dark:text-white">Company</h3>
+                <h3 class="mb-4 text-sm font-semibold text-fuchsia-900 uppercase dark:text-white">Job Pulse</h3>
                 <ul class="text-gray-500 dark:text-gray-400">
                     <li class="mb-2">
                         <a href="{{url('/about')}}" class=" hover:underline">About Job Puls</a>
@@ -20,6 +22,8 @@
                     </li>
                 </ul>
             </div>
+
+            <!-- Help Center Section -->
             <div>
                 <h3 class="mb-4 text-sm font-semibold text-fuchsia-900 uppercase dark:text-white">Help center</h3>
                 <ul class="text-gray-500 dark:text-gray-400">
@@ -43,13 +47,13 @@
             </div>
             
             <div>
-                <h3 class="mb-4 text-sm font-semibold text-fuchsia-900 uppercase dark:text-white">Company</h3>
+                <h3 class="mb-4 text-sm font-semibold text-fuchsia-900 uppercase dark:text-white">Companies</h3>
                 <ul class="text-gray-500 dark:text-gray-400">
                     <li class="mb-2">
-                        <a href="#" class=" hover:underline">Create Account</a>
+                        <a href="{{url('companySignupPage')}}" class=" hover:underline">Create an Account</a>
                     </li>
                     <li class="mb-2">
-                        <a href="#" class="hover:underline">Post a Job</a>
+                        <a href="{{url('jobPostPage')}}" class="hover:underline">Post a Job</a>
                     </li>                    
                     <li class="mb-2">
                         <a href="#" class="hover:underline">Download App</a>
@@ -66,7 +70,7 @@
                 <h3 class="mb-4 text-sm font-semibold text-fuchsia-900 uppercase dark:text-white">Candidate</h3>
                 <ul class="text-gray-500 dark:text-gray-400">
                     <li class="mb-2">
-                        <a href="#" class="hover:underline">Create Account</a>
+                        <a href="{{('accountPage')}}" class="hover:underline">Create an Account</a>
                     </li>
                     <li class="mb-2">
                         <a href="#" class="hover:underline">Video CV</a>

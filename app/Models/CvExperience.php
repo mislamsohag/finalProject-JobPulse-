@@ -18,6 +18,11 @@ class CvExperience extends Model
         'user_id'
     ];
 
+    protected $casts = [
+        'joining_date' => 'datetime:Y-m-d',
+        'departure_date' => 'datetime:Y-m-d',
+      ];
+
     public function user():BelongsTo{
         return $this->belongsTo(User::class);
     }

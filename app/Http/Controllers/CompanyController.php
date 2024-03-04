@@ -15,7 +15,7 @@ class CompanyController extends Controller
     {
         return view('backend.company.companyEntry');
     }
-    public function companyAddPage()
+    public function companySignupPage()
     {
         return view('frontend.pages.companyAddPage');
     }

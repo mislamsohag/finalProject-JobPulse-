@@ -50,14 +50,14 @@
                           </div>
 
                           <!-- Hidden Id's for Account Id -->                          
-                          <input hidden name="account_id" type="text" value="{{$info->account->id ?? ' '}}" class="" id="account_id" />
+                          <input hidden name="account_id" type="text" value="{{$info->account->id}}" class="" id="account_id" />
                           <!-- <input hidden name="password" type="text" value="{{$info->password}}" class="" id="account_id" /> -->
 
                           <!-- Father_Name -->
                           <div>
                             <label for="father_name"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Father's Name</label>
-                            <input name="father_name" type="text" id="father_name" value="{{$info->cv_basic->father_name ?? ' '}}"
+                            <input name="father_name" type="text" id="father_name" value="{{$info->cv_basic->father_name}}"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Father's Name" required />
                           </div>
@@ -66,7 +66,7 @@
                           <div>
                             <label for="mother_name"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mother's Name</label>
-                            <input name="mother_name" type="text" id="mother_name" value="{{$info->cv_basic->mother_name ?? ' '}}"
+                            <input name="mother_name" type="text" id="mother_name" value="{{$info->cv_basic->mother_name}}"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Mother's Name" required />
                           </div>
@@ -76,7 +76,7 @@
                             <label for="dateOfBirth"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Date
                               of Birth</label>
-                            <input name="dateOfBirth" type="date" id="dateOfBirth" value="{{$info->cv_basic->dateOfBirth ?? ' '}}"
+                            <input name="dateOfBirth" type="date" id="dateOfBirth" value="{{$info->cv_basic->dateOfBirth}}"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Date of Birth" />
                           </div>
@@ -86,7 +86,7 @@
                             <label for="phone"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone
                               number</label>
-                            <input name="phone" type="number" id="phone" value="{{$info->account->phone ?? ' '}}"
+                            <input name="phone" type="number" id="phone" value="{{$info->account->phone}}"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" />
                           </div>
@@ -95,7 +95,7 @@
                           <div>
                             <label for="blood_group"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Blood Group</label>
-                            <input name="blood_group" type="text" id="blood_group" value="{{$info->cv_basic->blood_group ?? ' '}}"
+                            <input name="blood_group" type="text" id="blood_group" value="{{$info->cv_basic->blood_group}}"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Blood Group" required />
                           </div>
@@ -105,7 +105,7 @@
                             <label for="n_id"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">NID/Any Type of
                               ID</label>
-                            <input name="n_id" type="number" id="n_id" value="{{$info->cv_basic->n_id ?? ' '}}"
+                            <input name="n_id" type="number" id="n_id" value="{{$info->cv_basic->n_id}}"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="NID/Any Type of ID" required />
                           </div>
@@ -114,7 +114,7 @@
                           <div>
                             <label for="passport"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Passport No.</label>
-                            <input name="passport" type="text" id="passport" value="{{$info->cv_basic->passport ?? ' '}}"
+                            <input name="passport" type="number" id="passport" value="{{$info->cv_basic->passport}}"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Passport No." />
                           </div>
@@ -124,7 +124,7 @@
                             <label for="EmergencyContact"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Emergency Contact
                               No.</label>
-                            <input name="emergency" type="number" id="emergency" value="{{$info->account->emergency ?? ' '}}"
+                            <input name="emergency" type="number" id="emergency" value="{{$info->account->emergency}}"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Emergency Contact No." />
                           </div>
@@ -133,7 +133,7 @@
                           <div>
                             <label for="email"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
-                            <input type="email" name="email" readonly value="{{$info->email ?? ' '}}"
+                            <input type="email" name="email" readonly value="{{$info->email}}"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="email" />
                           </div>
@@ -142,7 +142,7 @@
                           <div>
                             <label for="whatsup"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">WhatsApp</label>
-                            <input name="whatsup" type="number" id="whatsup" value="{{$info->account->whatsup ?? ' '}}"
+                            <input name="whatsup" type="number" id="whatsup" value="{{$info->account->whatsup}}"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="WhatsApp" />
                           </div>
@@ -151,7 +151,7 @@
                           <div>
                             <label for="linkedin"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Linkedin Link</label>
-                            <input name="linkedin" type="text" id="linkedin" value="{{$info->cv_basic->linkedin ?? ' '}}"
+                            <input name="linkedin" type="text" id="linkedin" value="{{$info->cv_basic->linkedin}}"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Linkedin Link" />
                           </div>
@@ -160,7 +160,7 @@
                           <div>
                             <label for="facebook"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Facebook Link</label>
-                            <input name="facebook" type="text" id="facebook" value="{{$info->cv_basic->facebook ?? ' '}}"
+                            <input name="facebook" type="text" id="facebook" value="{{$info->cv_basic->facebook}}"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Facebook Link" />
                           </div>
@@ -170,7 +170,7 @@
                             <label for="gitHub"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">GitHub
                               Link</label>
-                            <input name="github" type="text" id="github" value="{{$info->cv_basic->github ?? ' '}}"
+                            <input name="github" type="text" id="github" value="{{$info->cv_basic->github}}"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="GitHub Link" />
                           </div>
@@ -180,7 +180,7 @@
                             <label for="Behance/Dribble Link"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Behance/Dribble
                               Link</label>
-                            <input type="text" name="behance" id="behance" value="{{$info->cv_basic->behance ?? ' '}}"
+                            <input type="text" name="behance" id="behance" value="{{$info->cv_basic->behance}}"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Behance/Dribble Link" />
                           </div>
@@ -190,7 +190,7 @@
                             <label for="Portfolio Website"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Portfolio
                               Website</label>
-                            <input type="text" name="portfolio" id="portfolio" value="{{$info->cv_basic->portfolio ?? ' '}}"
+                            <input type="text" name="portfolio" id="portfolio" value="{{$info->cv_basic->portfolio}}"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Portfolio Website" />
                           </div>
@@ -199,10 +199,9 @@
                           <div class="flex items-center md:p-2 rounded-b dark:border-gray-600">
                             <div class="min-w-2/12">
                               <img class=" object-cover w-32 rounded-t-lg h-32 md:h-32 md:w-32 md:rounded-none md:rounded-s-lg"
-                                src="{{$info->account->img ?? '#'}}" alt="Candidate Picture">
+                                src="{{$info->account->img}}" alt="Candidate Picture">
                               
-                                <input name="img" type="file">                                
-                                
+                                <input name="img" type="file" value="{{$info->account->img}}">
                             </div>
                           </div>
 
@@ -245,7 +244,7 @@
                               Type</label>
                             <select name="degree" id="degree"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                              <option value="{{$info->cv_education->degree ?? ' '}}">{{$info->cv_education->degree ?? ' '}}</option>
+                              <option value="{{$info->cv_education->degree}}">{{$info->cv_education->degree}}</option>
                               <option value="Secondary (SSC)">Secondary (SSC)</option>
                               <option value="Higher Secondary (HSC)">Higher Secondary (HSC)</option>
                               <option value="Bachelore of Science">Bachelore of Science</option>
@@ -262,7 +261,7 @@
                             <label for="school_university"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Institute
                               Name</label>
-                            <input name="school_university" type="text" id="school_university" value="{{$info->cv_education->school_university ?? ' '}}" 
+                            <input name="school_university" type="text" id="school_university" value="{{$info->cv_education->school_university}}" 
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Institute Name" required />
                           </div>
@@ -271,7 +270,7 @@
                           <div>
                             <label for="department"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Department/Subject</label>
-                            <input name="department" type="text" value="{{$info->cv_education->department ?? ' '}}"
+                            <input name="department" type="text" value="{{$info->cv_education->department}}"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Department or Subject" required />
                           </div>
@@ -279,8 +278,8 @@
                           <!-- Group -->
                           <div>
                             <label for="group"
-                              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Group (if any)</label>
-                            <input name="group" type="text" id="group" value="{{$info->cv_education->group ?? ' '}}"
+                              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Group</label>
+                            <input name="group" type="text" id="group" value="{{$info->cv_education->group}}"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Group" />
                           </div>
@@ -289,7 +288,7 @@
                           <div>
                             <label for="Passing Year"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Passing Year</label>
-                            <input name="passing_year" type="number" id="passing_year" value="{{$info->cv_education->passing_year ?? ' '}}"
+                            <input name="passing_year" type="number" id="passing_year" value="{{$info->cv_education->passing_year}}"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Passing Year" required />
                           </div>
@@ -298,7 +297,7 @@
                           <div>
                             <label for="CGPA"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">CGPA</label>
-                            <input name="CGPA" type="text" id="CGPA" value="{{$info->cv_education->CGPA ?? ' '}}"
+                            <input name="CGPA" type="number" id="CGPA" value="{{$info->cv_education->CGPA}}"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="CGPA" required />
                           </div>
@@ -337,13 +336,15 @@
                       <form method="POST" action="{{url('cvTraining')}}" enctype="multipart/form-data">
                         @csrf
 
-                        <div class="grid gap-6 mb-6 md:grid-cols-2">                          
+                        <div class="grid gap-6 mb-6 md:grid-cols-2">
+                          <!-- Hidden field -->
+                          <input name="user_id" type="text" class="" value="{{$info->id}}" />
 
                           <!-- Training Name -->
                           <div>
                             <label for="Training Name"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Training Name</label>
-                            <input name="training_name" type="text" id="training_name" value="{{$info->cv_training->training_name ?? ' '}}"
+                            <input name="training_name" type="text" id="training_name" value="{{$info->cv_training->training_name}}"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Training Name" required />
                           </div>
@@ -353,7 +354,7 @@
                             <label for="organization"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Organization
                               Name</label>
-                            <input name="organization" type="text" id="organization" value="{{$info->cv_training->organization ?? ' '}}"
+                            <input name="organization" type="text" id="organization" value="{{$info->cv_training->organization}}"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Organization Name" required />
                           </div>
@@ -363,7 +364,7 @@
                             <label for="Training Duration"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Training
                               Duration</label>
-                            <input name="duration" type="text" id="duration" value="{{$info->cv_training->duration ?? ' '}}"
+                            <input name="duration" type="text" id="duration" value="{{$info->cv_training->duration}}"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Type month or year" required />
                           </div>
@@ -372,7 +373,7 @@
                           <div>
                             <label for="Passing Year"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Passing Year</label>
-                            <input name="passing_year" type="number" id="passing_year" value="{{$info->cv_training->passing_year ?? ' '}}"
+                            <input name="passing_year" type="number" id="passing_year" value="{{$info->cv_training->passing_year}}"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Passing Year" required />
                           </div>
@@ -408,12 +409,15 @@
                       <form method="POST" action="{{url('cvExperience')}}" enctype="multipart/form-data">
                         @csrf
 
-                        <div class="grid gap-6 mb-6 md:grid-cols-2">                          
+                        <div class="grid gap-6 mb-6 md:grid-cols-2">
+                          <!-- Hidden Field -->
+                          <input name="user_id" type="text" value="2" class="" id="user_id" />
+
                           <!-- Company Name -->
                           <div>
                             <label for="Company Name"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Company Name</label>
-                            <input name="company_name" type="text" id="company_name" value="{{$info->cv_experience->company_name ?? ' '}}"
+                            <input name="company_name" type="text" id="company_name" value="{{$info->cv_experience->company_name}}"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Company Name" required />
                           </div>
@@ -422,7 +426,7 @@
                           <div>
                             <label for="Designation"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Designation</label>
-                            <input name="designation" type="text" id="designation" value="{{$info->cv_experience->designation ?? ' '}}"
+                            <input name="designation" type="text" id="designation" value="{{$info->cv_experience->designation}}"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Designation" required />
                           </div>
@@ -431,7 +435,7 @@
                           <div>
                             <label for="Joining Date"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Joining Date</label>
-                            <input name="joining_date" type="date" id="joining_date" value="{{$info->cv_experience->joining_date ?? ' '}}"
+                            <input name="joining_date" type="date" id="joining_date" value="{{$info->cv_experience->joining_date}}"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                           </div>
 
@@ -440,7 +444,7 @@
                             <label for="departure_date"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Departure
                               Date</label>
-                            <input name="departure_date" type="date" id="departure_date" value="{{$info->cv_experience->departure_date ?? ' '}}"
+                            <input name="departure_date" type="date" id="departure_date" value="{{$info->cv_experience->departure_date}}"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                           </div>
 
@@ -476,13 +480,16 @@
                       <form method="POST" action="{{url('cvSkills')}}" enctype="multipart/form-data">
                         @csrf
                         <div class="grid gap-6 mb-6 md:grid-cols-2">
+                          <!-- Hidden Field -->
+                          <input name="user_id" type="text" id="user_id" value="2"/>
+                          
                           <div>
                             <label for="skills"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Type your skill
                               within comma</label>
                             <textarea name="skills" id="skills" rows="1" 
                               class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                              placeholder="Write your skill with comma">{{$info->cv_skill->skills ?? ' '}}</textarea>
+                              placeholder="Write your skill with comma">{{$info->cv_skill->skills}}</textarea>
                           </div>
 
                           <!-- Current Salary -->
@@ -490,7 +497,7 @@
                             <label for="Current Salary"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Current Salary (if
                               any)</label>
-                            <input name="current_salary" type="text" value="{{$info->cv_skill->current_salary ?? ' '}}"
+                            <input name="current_salary" type="text" value="{{$info->cv_skill->current_salary}}"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Current Salary" />
                           </div>
@@ -499,7 +506,7 @@
                           <div>
                             <label for="Expected Salary"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Expected Salary</label>
-                            <input name="expected_salary" type="text" id="expected_salary" value="{{$info->cv_skill->expected_salary ?? ' '}}"
+                            <input name="expected_salary" type="text" id="expected_salary" value="{{$info->cv_skill->expected_salary}}"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Expected Salary" required />
                           </div>
