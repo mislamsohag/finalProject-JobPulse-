@@ -3,20 +3,20 @@
 namespace App\Http\Controllers;
 
 use Exception;
-use App\Models\Rule;
+use App\Models\Role;
 use Illuminate\Http\Request;
 use App\Helper\ResponseHelper;
 
-class RuleController extends Controller
+class RoleController extends Controller
 {
-    public function addRule(Request $request){
+      public function addRole(Request $request){
 
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
         ]);
 
         try{
-            Rule::updateOrCreate([
+            Role::updateOrCreate([
                 'name'=>$request->input('name')
             ]);
             return ResponseHelper::Out('success', 'Rule add successfully', 200);
@@ -26,3 +26,5 @@ class RuleController extends Controller
         }
     }
 }
+
+

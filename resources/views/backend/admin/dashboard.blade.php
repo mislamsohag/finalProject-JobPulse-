@@ -3,17 +3,17 @@
 @section('title', 'Dashboard')
 
 @section('content')
-<!-- Rules add One times -->
+<!-- Roles add One times -->
 <div class="flex flex-wrap -mx-3">
   <div class="w-full max-w-full px-3 mb-6 sm:w-1/2 sm:flex-none xl:mb-0 xl:w-1/2">
     <div class="flex-auto mb-10">
-      <form method="POST" action="{{url('addRule')}}" role="form">
+      <form method="POST" action="{{url('addRole')}}" role="form">
         @csrf
 
-        <label for="rules" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select a rule</label>
-        <select name="name" id="rules"
+        <label for="roles" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select a role</label>
+        <select name="name" id="roles"
           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-          <option selected>Choose a rule</option>
+          <option selected>Choose a role</option>
           <option value="admin">Admin</option>
           <option value="editor">Editor</option>
           <option value="user">User</option>

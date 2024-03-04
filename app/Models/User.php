@@ -24,11 +24,11 @@ class User extends Authenticatable
         'email',        
         'password',
         'otp',
-        'rule_id'
+        'role_id'
     ];
     protected $attributes=[
         'otp'=>'0',
-        'rule_id'=>3
+        'role_id'=>3
 ];
 
 public function company(): HasMany

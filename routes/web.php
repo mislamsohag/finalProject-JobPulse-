@@ -6,7 +6,7 @@ use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\CvController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\JobController;
-use App\Http\Controllers\RuleController;
+use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UsersController;
 use App\Http\Middleware\TokenVerificationMiddleware;
 use Illuminate\Support\Facades\Route;
@@ -28,8 +28,8 @@ Route::POST("/verifyOTP", [UsersController::class, "verifyOTP"]);
 Route::get("/resetPasswordPage", [UsersController::class, "resetPasswordPage"])->middleware([TokenVerificationMiddleware::class]);
 Route::POST("/resetPassword", [UsersController::class, "resetPassword"])->middleware([TokenVerificationMiddleware::class]);
 
-// Rule & Category Routes
-Route::POST("/addRule", [RuleController::class, "addRule"])->middleware([TokenVerificationMiddleware::class]);
+// Role & Category Routes
+Route::POST("/addRole", [RoleController::class, "addRole"])->middleware([TokenVerificationMiddleware::class]);
 Route::POST("/addCategory", [CategoryController::class, "addCategory"])->middleware([TokenVerificationMiddleware::class]);
 
 // Company Routes
