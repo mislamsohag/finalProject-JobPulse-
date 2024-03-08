@@ -21,12 +21,12 @@
 
 <!-- Recent Publish Job block Start -->
 
-<section class="bg-gray-50 dark:bg-gray-800"> 
+<section class="bg-gray-50 dark:bg-gray-800">
     <div class="max-w-screen-xl px-4 py-4 mx-auto space-y-6 lg:space-y-6 lg:py-4 lg:px-4">
-        <!-- Row --> 
+        <!-- Row -->
         <div class="flex flex-wrap items-center justify-between">
             <h2 class="text-2xl font-extrabold tracking-tight text-fuchsia-900 dark:text-white">All Published Jobs</h2>
-            
+
             <!-- Search Button Start-->
             <form class="flex items-center max-w-screen">
                 <label for="simple-search" class="sr-only">Search</label>
@@ -53,7 +53,7 @@
                 </button>
             </form>
             <!-- Search Button End -->
-        </div>       
+        </div>
         <button type="button"
             class="py-2.5 px-5 me-2 mb-2 font-semibold text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-fuchsia-900 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-fuchsia-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Developers</button>
         <button type="button"
@@ -65,78 +65,25 @@
         <button type="button"
             class="py-2.5 px-5 me-2 mb-2 font-semibold text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-fuchsia-900 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-fuchsia-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Others</button>
 
-        <div class="items-center gap-2 sm:grid sm:grid-cols-2 md:grid md:grid-cols-3  lg:grid lg:grid-cols-4 xl:gap-2">
-
-            <div class="text-gray-500 sm:text-lg dark:text-gray-400">
-                <a href="#"
-                    class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-
-                    <img class="object-cover w-2/5 rounded-t-lg md:h-2/5 md:w-2/5 md:rounded-none md:rounded-s-lg"
-                        src="{{asset('images/sohagTech_logo.png')}}" alt="Company Logo">
-                    <div class="flex flex-col justify-between p-4 leading-normal">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-fuchsia-900 dark:text-white">Job Title
-                        </h5>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Job Description-1</p>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Job Description-2</p>
+        <div
+            class="items-center gap-2 sm:grid sm:grid-cols-2 md:grid md:grid-cols-3  lg:grid lg:grid-cols-4 xl:gap-2">
+            @foreach($jobs as $job)
+            <a href="{{url('jobShow', $job->id)}}">
+                <div class=" w-full mb-2 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <!-- <img class="w-16 h-16 p-4 rounded-t-lg" src="#" alt="Company image" /> -->
+                    <div class="px-5 p-4">
+                        <h5 class="text-xl font-semibold tracking-tight text-fuchsia-900 dark:text-white">{{$job->title}}</h5>
+                        <p>{{$job->education}}</p>
+                        <p>{{$job->work_mode}}</p>
+                        <p>{{$job->job_type}}</p>
                     </div>
-                </a>
-            </div>
-            <div class="text-gray-500 sm:text-lg dark:text-gray-400">
-                <a href="#"
-                    class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-
-                    <img class="object-cover w-2/5 rounded-t-lg md:h-2/5 md:w-2/5 md:rounded-none md:rounded-s-lg"
-                        src="{{asset('images/sohagTech_logo.png')}}" alt="Company Logo">
-                    <div class="flex flex-col justify-between p-4 leading-normal">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-fuchsia-900 dark:text-white">Job Title
-                        </h5>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Job Description-1</p>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Job Description-2</p>
-                    </div>
-                </a>
-            </div>
-            <div class="text-gray-500 sm:text-lg dark:text-gray-400">
-                <a href="#"
-                    class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-
-                    <img class="object-cover w-2/5 rounded-t-lg md:h-2/5 md:w-2/5 md:rounded-none md:rounded-s-lg"
-                        src="{{asset('images/sohagTech_logo.png')}}" alt="Company Logo">
-                    <div class="flex flex-col justify-between p-4 leading-normal">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-fuchsia-900 dark:text-white">Job Title
-                        </h5>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Job Description-1</p>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Job Description-2</p>
-                    </div>
-                </a>
-            </div>
-            <div class="text-gray-500 sm:text-lg dark:text-gray-400">
-                <a href="#"
-                    class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-
-                    <img class="object-cover w-2/5 rounded-t-lg md:h-2/5 md:w-2/5 md:rounded-none md:rounded-s-lg"
-                        src="{{asset('images/sohagTech_logo.png')}}" alt="Company Logo">
-                    <div class="flex flex-col justify-between p-4 leading-normal">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-fuchsia-900 dark:text-white">Job Title
-                        </h5>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Job Description-1</p>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Job Description-2</p>
-                    </div>
-                </a>
-            </div>
-
-
-
-
-
-
-
-
-
+                </div>
+            </a>
+            @endforeach
         </div>
-
     </div>
 </section>
-<!-- End Recent Publish Job block -->
+<!-- End Publish Job block -->
 
 <!-- Top Companies Block Start -->
 <section class="bg-white dark:bg-fuchsia-900">
@@ -157,6 +104,7 @@
                     </a>
                 </div>
             </div>
+
             <div
                 class="w-full text-center max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="#">
@@ -169,6 +117,7 @@
                     </a>
                 </div>
             </div>
+
             <div
                 class="w-full text-center max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="#">
@@ -188,5 +137,4 @@
 
 <!-- Footer -->
 @include('frontend.components.footer')
-
 @endsection

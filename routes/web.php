@@ -60,10 +60,12 @@ Route::get('/plugins', [AdminController::class, 'plugins']);
 
 // Job Routes
 Route::get('/jobs', [JobController::class, 'index']);
+Route::get('/jobShow/{id}', [JobController::class, 'show']);
+
+// Job Banckend Routes
 Route::get('/jobCreate', [JobController::class, 'create'])->middleware([TokenVerificationMiddleware::class]);
 Route::POST('/jobStore', [JobController::class, 'store'])->middleware([TokenVerificationMiddleware::class]);
 Route::get('/jobCategory', [JobController::class, 'jobCategory']);
-Route::get('/jobDetails', [JobController::class, 'jobDetails']);
 Route::get('/jobDetails', [JobController::class, 'jobDetails']);
 
 

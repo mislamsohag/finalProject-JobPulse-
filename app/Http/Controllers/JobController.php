@@ -16,7 +16,9 @@ class JobController extends Controller
      */
     public function index()
     {
-        return view('frontend.pages.jobs');
+        $jobs=Job::all();
+        // return $jobs;
+        return view('frontend.pages.jobs', compact('jobs'));
     }
 
     /**
@@ -30,8 +32,7 @@ class JobController extends Controller
         $companies=Company::where('user_id', $userId)->get();
         // dd($userId);
 
-        return view('backend.company.jobStorePage', compact('categories', 'companies'));
-    
+        return view('backend.company.jobStorePage', compact('categories', 'companies'));    
     }
 
     /**
@@ -96,7 +97,10 @@ class JobController extends Controller
      */
     public function show(string $id)
     {
-        //
+        // dd($id);
+        $jobDetails=Job::where('id','=', $id)->with('company')->get();
+        // return $jobDetails;
+        return view('frontend.pages.jobShow', compact('jobDetails'));
     }
 
     /**
