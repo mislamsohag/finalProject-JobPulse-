@@ -2,34 +2,50 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
-use App\Models\Company;
 use Exception;
 use App\Models\Job;
+use App\Models\Company;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Helper\ResponseHelper;
 
 class JobController extends Controller
 {
-
-    public function index(){
+    /**
+     * Display a listing of the resource.
+     */
+    public function index()
+    {
         return view('frontend.pages.jobs');
     }
-    public function jobPostPage(Request $request){
-        $userId=$request->header('id');
-        $companies=Company::where('user_id', $userId)->get();
-        // dd($company);
 
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create(Request $request)
+    {
+        $userId=$request->header('id');
+        
         $categories=Category::all();
-        return view('backend.company.jobPostPage', compact('categories', 'companies'));
+        $companies=Company::where('user_id', $userId)->get();
+        // dd($userId);
+
+        return view('backend.company.jobStorePage', compact('categories', 'companies'));
+    
     }
-    public function jobPost(Request $request){
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request)
+    {
         // dd($request->input());
         $userId=$request->header('id');
         // dd($userId);        
 
          $request->validate([
             'title' => 'required',
+            'designation' => 'required',
             'description' => 'required',
             'response' => 'required',
             'benefits' => 'required',
@@ -50,6 +66,7 @@ class JobController extends Controller
         try{
             Job::create([               
                 'title'=>$request->input('title'),
+                'designation'=>$request->input('designation'),
                 'description'=>$request->input('description'),
                 'response'=>$request->input('response'),
                 'benefits'=>$request->input('benefits'),
@@ -67,11 +84,55 @@ class JobController extends Controller
                 'company_id'=>$request->input('company_id'),
                 'user_id'=>$userId
             ]);
-            return ResponseHelper::Out('success', 'Job post successfully', 200);
+            return redirect()->back()->with('success', 'Job post successfully');
             
         }catch(Exception $e){
             return ResponseHelper::Out('failed', $e, 401);
         }
     }
-}
 
+    /**
+     * Display the specified resource.
+     */
+    public function show(string $id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(string $id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, string $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(string $id)
+    {
+        //
+    }
+
+    public function jobCategory()
+    {
+        return view('backend.company.jobCategory');
+    }
+
+    public function jobDetails()
+    {
+        return view('backend.company.jobDetails');
+    }
+
+
+    
+}

@@ -11,6 +11,10 @@ use Illuminate\Support\Facades\DB;
 
 class AccountController extends Controller
 {
+    public function canDashboard(){
+        return view('backend.candidate.dashboard');
+    }
+    
     public function accountPage(){
         return view('backend.candidate.accountPage');
     }

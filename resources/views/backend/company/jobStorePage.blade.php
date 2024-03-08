@@ -5,7 +5,7 @@
 
 <div class="flex flex-col justify-between p-2 leading-normal w-full">
     <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-        <form method="POST" action="{{url('jobPost')}}">
+        <form method="POST" action="{{url('jobStore')}}">
             @csrf
             <div class="grid gap-6 mb-6 md:grid-cols-2">
                 <!-- Job Title -->
@@ -15,6 +15,14 @@
                     <input name="title" type="text"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         placeholder="Job title" required />
+                </div>
+
+                <!-- Job Dfesignation -->
+                <div>
+                    <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Designation</label>
+                    <input name="designation" type="text"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Job Designation" required />
                 </div>
 
                 <!-- Job description -->
@@ -63,7 +71,7 @@
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         <option selected>Choose a Work Mode</option>
                         <option value="on site">On site</option>
-                        <option value="remort">Remort</option>
+                        <option value="remote">Remote</option>
                     </select>
                 </div>
 
@@ -76,7 +84,7 @@
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         <option selected>Choose a Job Type</option>
                         <option value="part time">Part time</option>
-                        <option value="Full time">Full time</option>
+                        <option value="full time">Full time</option>
                     </select>
                 </div>
 
@@ -135,7 +143,7 @@
                         placeholder="Salary" required />
                 </div>
 
-                <!-- Deadlin -->
+                <!-- Deadline -->
                 <div>
                     <label for="deadline"
                         class="block mb-2 my-2 text-sm font-medium text-gray-900 dark:text-white">Deadline</label>
@@ -160,16 +168,16 @@
                 <!-- Company ID -->
                 <div>
                     <label for="Company ID"
-                        class="block mb-2 my-2 text-sm font-medium text-gray-900 dark:text-white">Company Name</label>
+                        class="block mb-2 my-2 text-sm font-medium text-gray-900 dark:text-white">Select a company name</label>
                     <select name="company_id" id="company_id"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                        <option selected>Choose a Company</option>
+                        
                         @foreach($companies as $company)
                         <option value="{{$company->id}}">{{$company->company_name}}</option>
                         @endforeach
                     </select>
                 </div>
-                
+                <div></div>
 
                 <!-- Button submit -->
                 <div class="float-right">

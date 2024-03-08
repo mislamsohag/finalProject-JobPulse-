@@ -228,7 +228,7 @@
                     </div>
                   </div>
 
-                  <!-- CV Education Information Start -->
+                  <!-- CV Education Information Start -->                 
                   <h2 id="accordion-collapse-heading-2">
                     <button type="button"
                       class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
@@ -248,18 +248,16 @@
                       <!-- CV Education Information -->
                       <form method="POST" action="{{url('cvEducation')}}" enctype="multipart/form-data">
                         @csrf
-                        <div class="grid gap-6 mb-6 md:grid-cols-2">
-                          
-                          
+                        <div class="grid gap-6 mb-6 md:grid-cols-2"> 
 
-                          
+                          @foreach($cvEducation as $education)
                           <!-- Degree -->
                           <div>
                             <label for="degree"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Degree Type</label>
                             <select name="degree" id="degree" 
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                              <option value="{{$info->cv_education->degree ?? '#'}}">{{$info->cv_education->degree ?? '#'}}</option>
+                              <option value="{{$education->degree ?? '#'}}">{{$education->degree ?? ' '}}</option>
                               <option value="Secondary (SSC)">Secondary (SSC)</option>
                               <option value="Higher Secondary (HSC)">Higher Secondary (HSC)</option>
                               <option value="Bachelore of Science">Bachelore of Science</option>
@@ -275,7 +273,7 @@
                           <div>
                             <label for="school_university"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">School University</label>
-                            <input name="school_university" type="text" id="school_university" value="{{$info->cv_education->school_university ?? '#'}}"
+                            <input name="school_university" type="text" id="school_university" value="{{$education->school_university ?? '#'}}"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Institute Name" required />
                           </div>
@@ -284,7 +282,7 @@
                           <div>
                             <label for="department"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Department/Subject</label>
-                            <input name="department" type="text" value="{{$info->cv_education->department ?? '#'}}"
+                            <input name="department" type="text" value="{{$education->department ?? '#'}}"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Department or Subject" required />
                           </div>
@@ -293,7 +291,7 @@
                           <div>
                             <label for="group"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Group (if any)</label>
-                            <input name="group" type="text" id="group" value="{{$info->cv_education->group ?? '#'}}"
+                            <input name="group" type="text" id="group" value="{{$education->group ?? '#'}}"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Group" />
                           </div>
@@ -303,7 +301,7 @@
                             <label for="Passing Year"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Passing Year</label>
                             <input name="passing_year" type="number" id="passing_year"
-                              value="{{$info->cv_education->passing_year ?? '#'}}"
+                              value="{{$education->passing_year ?? '#'}}"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="Passing Year" required />
                           </div>
@@ -312,13 +310,11 @@
                           <div>
                             <label for="CGPA"
                               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">CGPA</label>
-                            <input name="CGPA" type="text" id="CGPA" value="{{$info->cv_education->CGPA ?? '#'}}"
+                            <input name="CGPA" type="text" id="CGPA" value="{{$education->CGPA ?? '#'}}"
                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                               placeholder="CGPA" required />
-                          </div>
-                          
-                         
-                        
+                          </div>                          
+                         @endforeach                        
 
                           <div
                             class="flex items-center space-x-4 p-4 md:p-5 border-gray-200 rounded-b dark:border-gray-600">
@@ -329,7 +325,7 @@
                             <!-- Modal Button -->
                             <div class="block space-y-4 md:flex md:space-y-0 md:space-x-4 rtl:space-x-reverse">
                               <!-- Modal toggle -->
-                              <button data-modal-target="small-modal" data-modal-toggle="small-modal"
+                              <button data-modal-target="education-modal" data-modal-toggle="education-modal"
                                 class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 my-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
                                 type="button">
                                 Add Education
@@ -340,7 +336,7 @@
                             <!-- Modal Body -->
                             <form method="POST" action="{{url('cvEducation')}}" enctype="multipart/form-data">
                               @csrf
-                              <div id="small-modal" tabindex="-1"
+                              <div id="education-modal" tabindex="-1"
                                 class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
                                 <div class="relative w-full max-w-3xl max-h-full">
                                   <!-- Modal content -->
@@ -348,10 +344,10 @@
                                     <!-- Modal header -->
                                     <div
                                       class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-                                      <h3 class="text-xl font-medium text-gray-900 dark:text-white">Full Name:</h3>
+                                      <h3 class="text-xl font-medium text-gray-900 dark:text-white">Education Add</h3>
                                       <button type="button"
                                         class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                                        data-modal-hide="small-modal">
+                                        data-modal-hide="education-modal">
                                         <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                           fill="none" viewBox="0 0 14 14">
                                           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -431,10 +427,10 @@
                                     </div>
                                     <!-- Modal footer -->
                                     <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
-                                      <button data-modal-hide="small-modal" type="submit"
-                                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Select</button>
-                                      <button data-modal-hide="small-modal" type="button"
-                                        class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Reject</button>
+                                      <button data-modal-hide="education-modal" type="submit"
+                                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Save</button>
+                                      <button data-modal-hide="education-modal" type="button"
+                                        class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Cancel</button>
                                     </div>
                                   </div>
                                 </div>
@@ -446,10 +442,10 @@
                         </div>
                       </form>
                     </div>
-                  </div>
-                  
+                  </div>                  
                   <!-- CV Education Information End -->
 
+                  <!-- Cv Job Trainings Start -->
                   <h2 id="accordion-collapse-heading-3">
                     <button type="button"
                       class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
@@ -465,13 +461,11 @@
                   </h2>
                   <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
                     <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
-
                       <!-- CV Training Information -->
                       <form method="POST" action="{{url('cvTraining')}}" enctype="multipart/form-data">
                         @csrf
-
                         <div class="grid gap-6 mb-6 md:grid-cols-2">
-
+                          
                           <!-- Training Name -->
                           <div>
                             <label for="Training Name"
@@ -514,17 +508,19 @@
                               placeholder="Passing Year" required />
                           </div>
 
+                          <!-- Submit Button -->
                           <div class="flex items-center p-4 md:p-5 border-gray-200 rounded-b dark:border-gray-600">
                             <button type="submit"
                               class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Save</button>
-                            <a href="{{url('#')}}" type="button"
-                              class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Close</a>
+                          
                           </div>
                         </div>
                       </form>
                     </div>
                   </div>
+                  <!-- Cv Job Trainings end -->
 
+                  <!-- Expereince start-->
                   <h2 id="accordion-collapse-heading-4">
                     <button type="button"
                       class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
@@ -589,14 +585,14 @@
                           <div class="flex items-center p-4 md:p-5 border-gray-200 rounded-b dark:border-gray-600">
                             <button type="submit"
                               class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Save</button>
-                            <a href="{{url('#')}}" type="button"
-                              class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Close</a>
                           </div>
                         </div>
                       </form>
                     </div>
                   </div>
-
+                  <!-- Expereince End-->
+                  
+                  <!-- Expereince End-->
                   <h2 id="accordion-collapse-heading-5">
                     <button type="button"
                       class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
@@ -612,7 +608,6 @@
                   </h2>
                   <div id="accordion-collapse-body-5" class="hidden" aria-labelledby="accordion-collapse-heading-5">
                     <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
-
                       <!-- CV Skills -->
                       <form method="POST" action="{{url('cvSkills')}}" enctype="multipart/form-data">
                         @csrf
@@ -652,9 +647,8 @@
                           <div class="flex items-center p-4 md:p-5 border-gray-200 rounded-b dark:border-gray-600">
                             <button type="submit"
                               class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Save</button>
-                            <a href="{{url('#')}}" type="button"
-                              class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Close</a>
-                          </div>
+                           
+                            </div>
                         </div>
                       </form>
                     </div>

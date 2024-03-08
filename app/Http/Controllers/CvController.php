@@ -27,9 +27,11 @@ class CvController extends Controller
     public function cvEditPage(Request $request)
     {
         $userId = $request->header('id');
-        $data = User::where('id', $userId)->with('account', 'cv_basic', 'cv_education', 'cv_experience', 'cv_training', 'cv_skill')->get();
-        // dd($education);        
-        return view('backend.candidate.cv_Edit', compact('data'));
+        $data = User::where('id','=', $userId)->with('account', 'cv_basic')->get(); 
+        $cvEducation=CvEducation::where('user_id', '=', $userId)->get();
+        $cvTraining=CvTraining::where('user_id', '=', $userId)->get();
+        // return $cvTraining;      
+        return view('backend.candidate.cv_Edit', compact('data', 'cvEducation', 'cvTraining'));
     }
 
     public function cvBasic(Request $request)

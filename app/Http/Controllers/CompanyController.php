@@ -10,24 +10,56 @@ use App\Helper\ResponseHelper;
 use Illuminate\Support\Facades\DB;
 
 class CompanyController extends Controller
-{
+{   
+
+    public function comDashboard()
+    {
+        return view('backend.company.comDashboard');
+    }
+
+    public function comPlugins()
+    {
+        return view('backend.company.comPlugins');
+    }
+
+    public function comAllJobsBackend()
+    {
+        return view('backend.company.comAllJobs');
+    }
+
+    public function comAbout()
+    {
+        return view('backend.company.comAbout');
+    }
+
+    public function comBlog()
+    {
+        return view('backend.company.comBlogs');
+    }
+   
+
+    /**
+     * Display a listing of the resource.
+     */
     public function index()
     {
         return view('backend.company.companyEntry');
     }
-    public function companySignupPage()
+
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
     {
-        return view('frontend.pages.companyAddPage');
+        return view('frontend.pages.companyCreatePage');
     }
 
-    public function companies()
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request)
     {
-        return view('backend.admin.companies');
-    }
 
-    public function companyEntry(Request $request)
-    {       
-        
         // dd($request->input());
         DB::beginTransaction();
         try {
@@ -47,10 +79,10 @@ class CompanyController extends Controller
             $file_name = $img->getClientOriginalName();
             $img_name = "{$userID}-{$t}-{$file_name}";
             $img_url = "images/company/{$img_name}";
-            
+
             //image upload on local folder
             $img->move(public_path('images/company/'), $img_name);
-           
+
             // dd($userID);
             Company::create([
                 'user_id' => $userID,
@@ -81,5 +113,46 @@ class CompanyController extends Controller
 
     }
 
-}
+    /**
+     * Display the specified resource.
+     */
+    public function show(Request $request, string $id)
+    {
+        $companyId=$id;        
+        // dd($id);
 
+        $companyInfo=Company::where('id','=',$companyId)->with('job')->get();
+        // return $companyInfo;
+        
+        return view('frontend.companies.companyJobs', compact('companyInfo'));
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(string $id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, string $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(string $id)
+    {
+        //
+    }
+
+
+
+    
+
+}

@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Company;
 use App\Models\Job;
+use App\Models\Company;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -12,8 +13,10 @@ class HomeController extends Controller
 
         $companies=Company::all();
         // dd($companies);
-
         $allJobs=Job::all();
-        return view('frontend.pages.home' , compact('companies', 'allJobs'));
+
+        $categories=Category::all(['name','id']);
+        // dd($categories);
+        return view('frontend.pages.home' , compact('companies', 'allJobs', 'categories'));
     }
 }

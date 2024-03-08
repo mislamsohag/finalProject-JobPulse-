@@ -1,12 +1,13 @@
 <header class="fixed w-full">
     <nav class="bg-white border-gray-200 py-2.5 dark:bg-gray-900">
         <div class="flex flex-wrap items-center justify-between max-w-screen-xl">
-            <a href="home" class="flex items-center">
+            <a href="{{url('home')}}" class="flex items-center">
                 <img src="{{asset('./images/sohagTech_logo.png')}}" class="h-6 mr-3 sm:h-9" alt="Landwind Logo" />
                 <span class="self-center text-xl font-semibold whitespace-nowrap text-fuchsia-900 dark:text-white">Job Pulse</span>
             </a>
             <div class="flex items-center lg:order-2">
-                <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover"
+                <!-- <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" -->
+                <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover"
                     class="text-white bg-fuchsia-800 hover:bg-fuchsia-600 hover:text-white focus:ring-4 focus:outline-none focus:ring-fuchsia-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-fuchsia-600 dark:hover:bg-fuchsia-700 dark:focus:ring-fuchsia-800"
                     type="button">Login or Registration<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
