@@ -61,6 +61,8 @@ Route::get('/plugins', [AdminController::class, 'plugins']);
 // Job Routes
 Route::get('/jobs', [JobController::class, 'index']);
 Route::get('/jobShow/{id}', [JobController::class, 'show']);
+Route::get('/jobApplyPage/{id}', [JobController::class, 'edit'])->middleware([TokenVerificationMiddleware::class]);
+Route::post('/jobApplyed/{id}', [JobController::class, 'applyedJobs'])->middleware([TokenVerificationMiddleware::class]);
 
 // Job Banckend Routes
 Route::get('/jobCreate', [JobController::class, 'create'])->middleware([TokenVerificationMiddleware::class]);

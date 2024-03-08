@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Account;
 use Exception;
 use App\Models\Job;
 use App\Models\Company;
@@ -104,12 +105,34 @@ class JobController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for Job Apply Page
      */
-    public function edit(string $id)
+    public function edit(Request $request, string $id)
     {
-        //
+        // dd($id);
+        $jobInfo=Job::where('id', '=', $id)->with('company')->get();
+        $userId=$request->header('id');
+        // dd($userId);
+        
+        $userInfo=Account::where('user_id', '=', $userId)->with('user')->get();
+        // return $jobInfo;
+        // return $userInfo;
+        return view('frontend.companies.jobApplyPage', compact('userInfo', 'jobInfo'));
     }
+
+    public function applyedJobs(Request $request, string $id)
+    {
+        // dd($id);
+        $userId=$request->header('id');
+        $job_id=$request->input('job_id');
+        $account_id=$request->input('account_id');
+        $company_id=$request->input('company_id');
+       
+    }
+
+
+
+
 
     /**
      * Update the specified resource in storage.
