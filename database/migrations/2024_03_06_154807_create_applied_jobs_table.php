@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('currentSalary', 20)->nullable();
             $table->string('expectedSalary', 20);
-            $table->unsignedBigInteger('user_id', 20);
-            $table->unsignedBigInteger('account_id', 20);
-            $table->unsignedBigInteger('job_id', 20);
-            $table->unsignedBigInteger('company_id', 20);
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('account_id');
+            $table->unsignedBigInteger('job_id');
+            $table->unsignedBigInteger('company_id');
 
             $table->foreign('user_id')->references('id')->on('users')
                 ->cascadeOnUpdate()->restrictOnDelete();

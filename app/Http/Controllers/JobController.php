@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Account;
+use App\Models\AppliedJob;
 use Exception;
 use App\Models\Job;
 use App\Models\Company;
@@ -124,9 +125,20 @@ class JobController extends Controller
     {
         // dd($id);
         $userId=$request->header('id');
-        $job_id=$request->input('job_id');
+        $job_id=$id;
         $account_id=$request->input('account_id');
         $company_id=$request->input('company_id');
+        $current_salary=$request->input('current_salary');
+        $expected_salary=$request->input('expected_salary');
+
+        return AppliedJob::updateOrCreate([
+            'user_id'=>$userId,
+            'job_id'=>$job_id,
+            'account_id'=>$account_id,
+            'company_id'=>$company_id,
+            'current_salary'=> $current_salary,
+            'expected_salary'=>$expected_salary
+        ]);        
        
     }
 

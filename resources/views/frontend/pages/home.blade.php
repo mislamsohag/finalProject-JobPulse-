@@ -1,9 +1,6 @@
 @extends('layouts.master')
-
 @section('title', 'Home')
-
 @section('content')
-
 @include('frontend.components.header')
 
 <!-- Start Hero Section block -->

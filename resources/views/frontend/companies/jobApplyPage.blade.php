@@ -20,7 +20,8 @@
 
         <!-- main content -->
         @foreach($userInfo as $user)
-        <form action="">
+        <form method="POST" action="{{url('jobApplyed', $job->id)}}">
+          @csrf
           <div class="flex p-6 mb-2 border-0 rounded-t-inherit rounded-xl bg-gray-50">
             <div class="flex min-w-full flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
               <div class="flex flex-col justify-between p-4 leading-normal w-full">
@@ -55,8 +56,8 @@
                 <!-- <input class="hidden" name="job_id" type="text" value="{{$job->id}}"> -->
                 <input class="hidden" name="company_id" type="text" value="{{$job->company->id}}">
                 <!-- Apply button -->
-                <a href="{{url('jobApplyed', $job->id)}}" type="submit"
-                  class="text-white bg-green-700 mt-6 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-bold rounded-lg text-sm px-6 py-2 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Apply</a>
+                <button type="submit"
+                  class="text-white bg-green-700 mt-6 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-bold rounded-lg text-sm px-6 py-2 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Apply</button>
               </div>
             </div>
           </div>
